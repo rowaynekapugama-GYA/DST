@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dentist Turramurra | Dental Specialists | Turramurra Dental Clinic</title>
+<meta name="description" content="Dental Specialists of Turramurra provides specialist prosthodontist and orthodontist treatments in Turramurra NSW. Call Now!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#1487A5;          /* logo teal */
+  --teal-dark:#0E5D74;
+  --ink:#0C3B4A;           /* deep teal ink */
+  --ink-soft:#3E6473;
+  --paper:#FAFCFC;
+  --mist:#E6F2F5;          /* soft aqua tint */
+  --mist-deep:#D2E6EC;
+  --sand:#F2A65A;          /* warm accent */
+  --sand-soft:#FCE9D4;
+  --white:#FFFFFF;
+  --radius-arch:200px;
+  --shadow:0 18px 48px rgba(12,59,74,.12);
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Karla",-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;font-style:italic;line-height:1.12;letter-spacing:-.005em}
+.step-num,.trust-item strong{font-style:normal}
+.eyebrow{font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--sand);border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
+section{padding:clamp(4rem,8vw,6.5rem) 0}
+.ic{display:inline-flex;flex:none}
+.ic svg{width:100%;height:100%}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:.95rem;padding:.95rem 1.7rem;border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
+.btn svg{transition:transform .18s ease}
+.btn:hover svg{transform:translateX(3px)}
+.btn-solid{background:var(--teal);color:#fff}
+.btn-solid:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,135,165,.35)}
+.btn-sand{background:var(--sand);color:var(--ink)}
+.btn-sand:hover{background:#EC964A;transform:translateY(-2px);box-shadow:0 10px 24px rgba(242,166,90,.4)}
+.btn-ghost{border:2px solid var(--teal);color:var(--teal)}
+.btn-ghost:hover{background:var(--teal);color:#fff}
+.btn-white{background:#fff;color:var(--ink)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--sand);outline-offset:3px;border-radius:6px}
+
+/* ── Top bar + nav ─────────────────────────── */
+.topbar{background:var(--ink);color:#D7E8ED;font-size:.85rem;padding:.55rem 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.topbar a{display:inline-flex;align-items:center;gap:.45rem}
+.topbar a:hover{color:var(--sand)}
+.topbar .ic{width:15px;height:15px;color:var(--sand)}
+.topbar .hours{color:#9DBECA}
+header.nav{position:absolute;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid rgba(255,255,255,.16);transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
+.logo{display:flex;align-items:center}
+.logo img{height:54px;width:auto}
+.logo .logo-dark{display:none}
+/* transparent state: white-wordmark logo + white links over the banner */
+header.nav.scrolled .logo .logo-light{display:none}
+header.nav.scrolled .logo .logo-dark{display:block}
+header.nav:not(.scrolled) nav ul a{color:#fff}
+header.nav:not(.scrolled) nav ul a:hover{color:var(--sand);border-color:var(--sand)}
+header.nav:not(.scrolled) .nav-phone{color:#fff}
+header.nav:not(.scrolled) .nav-phone:hover{color:var(--sand)}
+header.nav:not(.scrolled) .menu-btn span{background:#fff}
+/* scrolled state: fixed solid bar, original logo colours */
+header.nav.scrolled{position:fixed;top:0;background:rgba(250,252,252,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--mist-deep);box-shadow:0 8px 30px rgba(12,59,74,.08);animation:navDrop .35s ease}
+@keyframes navDrop{from{transform:translateY(-100%)}to{transform:none}}
+.foot-logo{height:52px;width:auto}
+nav ul{display:flex;gap:1.6rem;list-style:none;font-weight:600;font-size:.93rem}
+nav ul a{padding:.4rem 0;border-bottom:2px solid transparent}
+nav ul a:hover{border-color:var(--sand);color:var(--teal)}
+.nav-cta{display:flex;align-items:center;gap:1rem}
+.nav-phone{font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:.45rem;color:var(--teal)}
+.nav-phone .ic{width:17px;height:17px}
+.nav-phone:hover{color:var(--teal-dark)}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;padding:.4rem}
+.menu-btn span{display:block;width:24px;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px}
+
+/* ── Mega dropdown ─────────────────────────── */
+nav ul li{position:relative}
+nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;font-size:.65em;vertical-align:middle}
+.has-mega:hover > a .caret,.has-mega:focus-within > a .caret{transform:rotate(180deg)}
+.mega{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,10px);background:#fff;border-radius:22px;box-shadow:0 30px 70px rgba(12,59,74,.22);padding:1.4rem;display:grid;grid-template-columns:220px 1fr;gap:1.3rem;width:560px;opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60}
+.mega::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.mega-img{border-radius:16px;overflow:hidden;position:relative;min-height:220px}
+.mega-img img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.mega-img span{position:absolute;left:0;right:0;bottom:0;padding:2rem .9rem .8rem;background:linear-gradient(transparent,rgba(12,59,74,.85));color:#fff;font-family:var(--font-display);font-size:1.05rem;line-height:1.2}
+.mega-links{display:grid;gap:.15rem;align-content:start}
+.mega-links a{display:block;padding:.6rem .8rem;border-radius:12px;border-bottom:none!important}
+.mega-links a:hover{background:var(--mist)}
+.mega-links strong{display:block;font-size:.93rem;color:var(--ink)}
+.mega-links small{font-size:.8rem;color:var(--ink-soft);font-weight:400;line-height:1.35;display:block}
+.mega.mega-sm{grid-template-columns:1fr;width:260px}
+
+/* ── Watermark name (scrolling marquee) ────── */
+.watermark{position:relative;z-index:5;margin-top:clamp(-3.4rem,-6vw,-2rem);pointer-events:none;overflow:hidden;line-height:1}
+.watermark .track{display:flex;align-items:center;gap:clamp(2rem,5vw,4rem);width:max-content;animation:marquee 46s linear infinite;will-change:transform}
+.watermark span{white-space:nowrap;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(3.4rem,10.5vw,8.5rem);letter-spacing:-.02em;color:rgba(20,135,165,.07);-webkit-text-stroke:1.5px rgba(20,135,165,.42)}
+.watermark .dot{width:clamp(.7rem,1.4vw,1.1rem);height:clamp(.7rem,1.4vw,1.1rem);border-radius:50%;background:rgba(242,166,90,.5);flex:none}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* ── Section effects ───────────────────────── */
+.diff-card,.svc-card,.ages-card,.team-card,.step{transition-delay:calc(var(--d,0)*90ms)}
+.reveal.in{transition-delay:calc(var(--d,0)*90ms)}
+.btn-sand,.btn-solid{position:relative;overflow:hidden}
+.btn-sand::after,.btn-solid::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);transition:left .5s ease}
+.btn-sand:hover::after,.btn-solid:hover::after{left:130%}
+.diff-icon{transition:transform .25s ease,background .25s ease}
+.diff-card:hover .diff-icon,.ages-card:hover .diff-icon{transform:translateY(-4px) rotate(-4deg)}
+.svc-card{position:relative;overflow:hidden}
+.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--sand));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.svc-card:hover::before{transform:scaleX(1)}
+.welcome-img img,.visit-img img{transition:transform .5s ease}
+.welcome-img:hover img,.visit-img:hover img{transform:scale(1.04)}
+
+/* ── Decorative section backgrounds ────────── */
+.deco{position:relative;overflow:hidden}
+.deco > .wrap{position:relative;z-index:1}
+.deco::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(20,135,165,.09) 0%,transparent 65%);top:-160px;right:-140px;pointer-events:none}
+.deco::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,166,90,.10) 0%,transparent 65%);bottom:-140px;left:-120px;pointer-events:none}
+.deco-flip::before{right:auto;left:-140px}
+.deco-flip::after{left:auto;right:-120px}
+.deco-tooth{position:absolute;width:clamp(220px,26vw,360px);opacity:.5;pointer-events:none}
+.deco-tooth svg{width:100%;height:auto;display:block}
+.deco-tooth.tl{top:2rem;left:-60px;transform:rotate(-14deg)}
+.deco-tooth.br{bottom:1.5rem;right:-70px;transform:rotate(11deg)}
+
+/* ── Hero ──────────────────────────────────── */
+.hero{position:relative;overflow:hidden;padding:clamp(8rem,15vw,12rem) 0 clamp(5rem,10vw,8rem);background:
+  linear-gradient(100deg,rgba(9,42,54,.88) 0%,rgba(12,59,74,.72) 42%,rgba(12,59,74,.25) 75%,rgba(12,59,74,.15) 100%),
+  url('https://smile-search-production-uploads-kmfcmkcr.s3.ap-southeast-2.amazonaws.com/images-gallery/1f0d3bf8-58ab-4e6b-8742-ef2bafb07dcd/turramurra/1784643255327-51gFrdsWxtoZsVyk1TuO9.jpg') center/cover no-repeat;
+  color:#fff}
+.hero .eyebrow{color:#BFE0EA}
+.hero-inner{max-width:38rem}
+.hero h1{font-size:clamp(2.4rem,5.2vw,3.9rem);margin-bottom:1.3rem}
+.hero h1 em{font-style:italic;font-weight:600;position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--sand);z-index:-1;border-radius:4px;opacity:.9}
+.hero p{font-size:1.12rem;color:#DCEBF0;margin-bottom:2rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.hero-trust{display:flex;gap:2.4rem;flex-wrap:wrap}
+.trust-item strong{font-family:var(--font-display);font-size:1.55rem;display:block}
+.trust-item small{font-size:.85rem;color:#BFD9E2;font-weight:600}
+.invis-badge{position:absolute;top:clamp(6rem,10vw,8rem);right:clamp(1.25rem,4vw,3rem);display:flex;align-items:center;gap:.85rem;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:.6rem 1.3rem .6rem .6rem;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.invis-badge .medal{width:46px;height:46px;flex:none;border-radius:50%;background:linear-gradient(145deg,#E8ECEF 0%,#B9C4CC 45%,#8FA1AC 100%);display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 1px 2px rgba(255,255,255,.8),0 3px 8px rgba(0,0,0,.25)}
+.invis-badge .medal svg{width:24px;height:24px}
+.invis-badge strong{display:block;font-size:.95rem;line-height:1.15;font-family:var(--font-display);font-style:italic}
+.invis-badge small{display:block;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#CFE3EA}
+@media (max-width:960px){
+  .invis-badge{position:static;margin-top:2rem;display:inline-flex}
+}
+
+/* ── Welcome ───────────────────────────────── */
+.welcome .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
+.welcome-img{border-radius:var(--radius-arch) var(--radius-arch) 24px 24px;overflow:hidden;box-shadow:var(--shadow)}
+.welcome h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1.2rem}
+.welcome p{color:var(--ink-soft);margin-bottom:1.1rem}
+.link-arrow{font-weight:700;font-size:.92rem;display:inline-flex;align-items:center;gap:.4rem;color:var(--teal)}
+.link-arrow .ic{width:15px;height:15px}
+.link-arrow:hover{color:var(--teal-dark)}
+
+/* ── Difference cards ──────────────────────── */
+.diff{position:relative;background:
+  linear-gradient(100deg,rgba(226,240,244,.97) 0%,rgba(226,240,244,.94) 45%,rgba(226,240,244,.72) 100%),
+  url('assets/aligner-smile-bg.jpg') right center/cover no-repeat}
+.diff .wrap{position:relative;z-index:1}
+.diff-head{text-align:center;max-width:44rem;margin:0 auto 3rem}
+.diff-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.diff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.diff-card{background:#fff;border-radius:26px;padding:2.2rem 1.9rem;box-shadow:0 8px 24px rgba(12,59,74,.06);transition:transform .2s ease, box-shadow .2s ease;display:flex;flex-direction:column;gap:.7rem}
+.diff-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.diff-icon{width:56px;height:56px;border-radius:18px;background:var(--mist);color:var(--teal);display:grid;place-items:center;margin-bottom:.4rem}
+.diff-icon svg{width:28px;height:28px}
+.diff-card h3{font-size:1.3rem}
+.diff-card p{font-size:.96rem;color:var(--ink-soft);flex:1}
+
+/* ── Services ──────────────────────────────── */
+.services-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.6rem;flex-wrap:wrap}
+.services-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:34rem}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.svc-card{background:#fff;border:1.5px solid var(--mist-deep);border-radius:22px;padding:1.9rem 1.7rem;transition:border-color .2s,transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:.6rem}
+.svc-card:hover{border-color:var(--teal);transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc-card h3{font-size:1.18rem}
+.svc-card p{font-size:.93rem;color:var(--ink-soft);flex:1}
+.svc-tag{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark);background:var(--mist);padding:.3rem .7rem;border-radius:999px;align-self:flex-start}
+
+/* ── Ages band ─────────────────────────────── */
+.ages{background:var(--ink);color:#EAF3F6}
+.ages .eyebrow{color:#9CC9D6}
+.ages h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:36rem;margin-bottom:1rem;color:#fff}
+.ages p.lede{color:#B9D3DC;max-width:42rem;margin-bottom:2.6rem}
+.ages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
+.ages-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:1.8rem 1.6rem;transition:background .2s;display:flex;flex-direction:column;gap:.6rem}
+.ages-card:hover{background:rgba(255,255,255,.12)}
+.ages-card .diff-icon{background:rgba(255,255,255,.1);color:var(--sand)}
+.ages-card h3{font-size:1.14rem;color:#fff}
+.ages-card p{font-size:.92rem;color:#B9D3DC;flex:1}
+.ages-card .link-arrow{color:var(--sand)}
+.ages-cta{margin-top:2.6rem;display:flex;gap:1rem;flex-wrap:wrap}
+.ages-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:2.6rem}
+.ages-photo{border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);aspect-ratio:1/1;max-width:340px;justify-self:end}
+.ages-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ages-photo:hover img{transform:scale(1.05)}
+
+/* ── Break strip ───────────────────────────── */
+.break-strip{background:linear-gradient(180deg,var(--paper) 0%,var(--mist) 100%)}
+.break-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+.break-img{border-radius:24px 24px 24px var(--radius-arch);overflow:hidden;box-shadow:var(--shadow)}
+.break-img img{transition:transform .5s ease}
+.break-img:hover img{transform:scale(1.04)}
+.break-strip h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem}
+.break-strip p{color:var(--ink-soft);margin-bottom:1.6rem;max-width:32rem}
+.break-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+
+/* ── Team ──────────────────────────────────── */
+.team-head{text-align:center;max-width:42rem;margin:0 auto 3rem}
+.team-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.8rem}
+.team-head p{color:var(--ink-soft)}
+.team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:2.5rem}
+.team-card{text-align:center}
+.team-photo{border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.2rem;aspect-ratio:4/5;background:var(--mist)}
+.team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.team-card:hover .team-photo img{transform:scale(1.04)}
+.team-card h3{font-size:1.25rem}
+.team-card small{color:var(--teal);font-weight:700;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase}
+
+/* ── Steps / payment ───────────────────────── */
+.steps{background:var(--mist)}
+.steps-inner{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2.5rem,5vw,4.5rem)}
+.steps h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem}
+.steps .lede{color:var(--ink-soft);margin-bottom:1.6rem}
+.pay-logos{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
+.pay-logos img{height:38px;width:auto;background:#fff;border-radius:12px;padding:.5rem .9rem;box-shadow:0 6px 16px rgba(12,59,74,.07)}
+.step{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.5rem 0;border-bottom:1.5px solid var(--mist-deep)}
+.step:last-child{border-bottom:none}
+.step-num{font-family:var(--font-display);font-size:1.5rem;width:54px;height:54px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px rgba(12,59,74,.08)}
+.step h3{font-size:1.15rem;margin-bottom:.35rem}
+.step p{font-size:.94rem;color:var(--ink-soft)}
+
+/* ── Visit ─────────────────────────────────── */
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+.visit-img{border-radius:24px var(--radius-arch) 24px 24px;overflow:hidden;box-shadow:var(--shadow)}
+.visit h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem}
+.visit p{color:var(--ink-soft);margin-bottom:1rem}
+.visit ul{list-style:none;margin:1.4rem 0 2rem;display:grid;gap:.8rem}
+.visit li{display:flex;gap:.8rem;align-items:flex-start;font-size:.97rem}
+.visit li .check{flex:none;width:26px;height:26px;border-radius:50%;background:var(--mist);color:var(--teal);display:grid;place-items:center;margin-top:.1rem}
+.visit li .check svg{width:13px;height:13px}
+
+/* ── Contact band ──────────────────────────── */
+.contact{background:var(--ink);color:#EAF3F6}
+.contact .eyebrow{color:#9CC9D6}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4rem);align-items:start}
+.contact h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:1rem;color:#fff}
+.contact p{color:#B9D3DC;margin-bottom:1.8rem}
+.contact-list{display:grid;gap:1.1rem;list-style:none;font-size:.98rem}
+.contact-list a{display:flex;gap:.9rem;align-items:center}
+.contact-list a:hover{color:var(--sand)}
+.contact-list .box{width:42px;height:42px;flex:none;border-radius:14px;background:rgba(255,255,255,.09);color:var(--sand);display:grid;place-items:center}
+.contact-list .box svg{width:19px;height:19px}
+.form-card{background:#fff;color:var(--ink);border-radius:26px;padding:2.2rem;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.form-card h3{font-size:1.4rem;margin-bottom:1.4rem}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form-grid .full{grid-column:1/-1}
+.form-card label{font-size:.82rem;font-weight:700;display:block;margin-bottom:.35rem}
+.form-card input,.form-card textarea{width:100%;border:1.5px solid var(--mist-deep);border-radius:12px;padding:.8rem .95rem;font-family:var(--font-body);font-size:.95rem;background:var(--paper)}
+.form-card input:focus,.form-card textarea:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.form-card button{margin-top:1.3rem;width:100%;justify-content:center;border:none;cursor:pointer;font-family:var(--font-body)}
+
+/* ── Footer ────────────────────────────────── */
+footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.foot-grid h4{color:#fff;font-family:var(--font-body);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
+.foot-grid ul{list-style:none;display:grid;gap:.55rem}
+.foot-grid a:hover{color:var(--sand)}
+.foot-brand p{margin:1.2rem 0 1.4rem;max-width:22rem}
+.foot-social{display:flex;gap:.7rem}
+.foot-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center}
+.foot-social a svg{width:17px;height:17px}
+.foot-social a:hover{background:var(--sand);color:var(--ink)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem}
+.foot-bottom a{text-decoration:underline}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(36px);filter:blur(3px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1),filter .85s cubic-bezier(.22,1,.36,1)}
+.reveal-left{transform:translateX(-46px)}
+.reveal-right{transform:translateX(46px)}
+.reveal-zoom{transform:scale(.93) translateY(20px)}
+.reveal.in{opacity:1;transform:none;filter:none}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+  .reveal{opacity:1;transform:none;filter:none}
+  html{scroll-behavior:auto}
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width:960px){
+  .welcome .wrap,.steps-inner,.visit .wrap,.contact .wrap,.break-inner,.ages-intro{grid-template-columns:1fr}
+  .ages-photo{justify-self:start;max-width:300px}
+  .diff-grid,.svc-grid,.ages-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  nav ul{display:none}
+  .menu-btn{display:block}
+  .nav-phone span{display:none}
+}
+@media (max-width:600px){
+  .diff-grid,.svc-grid,.ages-grid,.team-grid,.form-grid,.foot-grid{grid-template-columns:1fr}
+  .topbar .hours{display:none}
+  .logo img{height:44px}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-family" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 21v-2a6 6 0 0 1 12 0v2"/><path d="M16 21v-1.5a4.2 4.2 0 0 1 6-3.8"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></symbol>
+    <symbol id="i-tooth" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2.5 4 2.5 4-2.5 4-2.5"/><path d="M9 9h.01M15 9h.01"/></symbol>
+    <symbol id="i-child" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7" r="4"/><path d="M6 21v-1a6 6 0 0 1 12 0v1"/><path d="M9 6.5c.8-1 1.8-1.5 3-1.5s2.2.5 3 1.5"/></symbol>
+    <symbol id="i-adult" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6.5" r="3.5"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></symbol>
+    <symbol id="i-phases" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h5l2-7 4 14 2-7h5"/></symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V5c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.1H7.8v3h2.4v7h3.3Z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-google" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4Z"/><path d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22Z"/><path d="M6.4 14a6 6 0 0 1 0-3.9V7.5H3.1a10 10 0 0 0 0 9L6.4 14Z"/><path d="M12 6a5.4 5.4 0 0 1 3.8 1.5L18.7 4.6A9.6 9.6 0 0 0 12 2a10 10 0 0 0-8.9 5.5L6.4 10c.8-2.3 3-4 5.6-4Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <a href="https://maps.app.goo.gl/VeDJdGs6MLog7qxz7" target="_blank" rel="noopener"><span class="ic"><svg><use href="#i-pin"/></svg></span>Suite 2, 1335 Pacific Highway, Turramurra NSW 2074</a>
+    <div style="display:flex;gap:1.4rem;flex-wrap:wrap">
+      <a href="tel:0294887455"><span class="ic"><svg><use href="#i-phone"/></svg></span>(02) 9488 7455</a>
+      <span class="hours">Mon–Fri 8:00am – 5:00pm</span>
+    </div>
+  </div>
+</div>
+
+<!-- Nav -->
+<header class="nav">
+  <div class="wrap">
+    <a href="/" class="logo"><img class="logo-light" src="assets/logo-white.png" alt="Dental Specialists Turramurra — Orthodontics &amp; Prosthodontics"><img class="logo-dark" src="assets/logo.png" alt=""></a>
+    <nav aria-label="Main">
+      <ul>
+        <li class="has-mega">
+          <a href="/about-us/">About Us<span class="caret">▾</span></a>
+          <div class="mega mega-sm" role="menu">
+            <div class="mega-links">
+              <a href="/about-us/"><strong>About the Practice</strong><small>Our holistic approach to specialist care</small></a>
+              <a href="/our-team/"><strong>Our Team</strong><small>Meet our specialists and support team</small></a>
+              <a href="/blog/"><strong>Blog</strong><small>News and oral health advice</small></a>
+            </div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="/orthodontics/">Orthodontics<span class="caret">▾</span></a>
+          <div class="mega" role="menu">
+            <a class="mega-img" href="/orthodontics/">
+              <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="">
+              <span>Orthodontics with Dr Kamini Titus</span>
+            </a>
+            <div class="mega-links">
+              <a href="/turramurra/childrens-orthodontist/"><strong>Orthodontics for Children</strong><small>Early assessment &amp; a fun first visit</small></a>
+              <a href="/turramurra/adults-orthodontist/"><strong>Orthodontics for Adults</strong><small>Discreet modern straightening options</small></a>
+              <a href="/turramurra/two-phase-treatment/"><strong>Two-Phase Treatment</strong><small>Staged care for growing kids</small></a>
+              <a href="/turramurra/invisalign/"><strong>Invisalign</strong><small>Nearly invisible clear aligners</small></a>
+              <a href="/service/clarity-ceramic-braces/"><strong>Clarity Ceramic Braces</strong><small>Subtle, tooth-coloured braces</small></a>
+              <a href="/turramurra/orthodontic-faqs/"><strong>Orthodontic FAQs</strong><small>Your questions, answered</small></a>
+            </div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="/prosthodontics/">Prosthodontics<span class="caret">▾</span></a>
+          <div class="mega" role="menu">
+            <a class="mega-img" href="/prosthodontics/">
+              <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/AA-001-scaled-1-rnzffkj8j8zhcdbb48voobo5sin1ooxblo2l5jvz4w.jpg" alt="">
+              <span>Prosthodontics with Clin. A/Prof Anthony Au</span>
+            </a>
+            <div class="mega-links">
+              <a href="/turramurra/our-comprehensive-assessment/"><strong>Comprehensive Assessment</strong><small>A global view of your oral health</small></a>
+              <a href="/service/cosmetic-dental-care/"><strong>Cosmetic Dental Care</strong><small>Smile design built around you</small></a>
+              <a href="/service/anti-ageing-complex-restorative-dental-care/"><strong>Anti-ageing Restorative Care</strong><small>Complex restorative treatment</small></a>
+              <a href="/service/tmd-treatment/"><strong>Headaches &amp; Jaw Problems (TMD)</strong><small>Relief and long-term stability</small></a>
+              <a href="/turramurra/sleep-apnoea-sleep-disorders/"><strong>Sleep Apnoea &amp; Sleep Disorders</strong><small>Diagnosis and complete solutions</small></a>
+              <a href="/turramurra/ems-airflow-guided-biofilm-therapy/"><strong>EMS Airflow Biofilm Therapy</strong><small>A gentler professional clean</small></a>
+            </div>
+          </div>
+        </li>
+        <li class="has-mega">
+          <a href="/patient-info/">Patient Info<span class="caret">▾</span></a>
+          <div class="mega mega-sm" role="menu">
+            <div class="mega-links">
+              <a href="/appointments/"><strong>Appointments</strong><small>How to book your visit</small></a>
+              <a href="/fees-payment/"><strong>Fees &amp; Payment</strong><small>DentiCare, Humm &amp; Afterpay options</small></a>
+              <a href="/your-welcome-pack-and-registration/"><strong>Welcome Pack &amp; Registration</strong><small>Everything for your first visit</small></a>
+              <a href="/follow-up-care/"><strong>Follow Up Care</strong><small>Looking after your results</small></a>
+              <a href="/contact-us/doctor-referrals/"><strong>Doctor Referrals</strong><small>Information for referring clinicians</small></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/contact-us/">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:0294887455"><span class="ic"><svg><use href="#i-phone"/></svg></span><span>(02) 9488 7455</span></a>
+      <a class="btn btn-sand" href="/appointments/">Book a Visit</a>
+      <button class="menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <a class="invis-badge" href="/turramurra/invisalign/" aria-label="Invisalign Platinum Provider — learn about Invisalign at DST">
+    <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
+    <span><small>Platinum Provider</small><strong>Invisalign<sup>®</sup></strong></span>
+  </a>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Specialist Orthodontics &amp; Prosthodontics · North Shore</span>
+      <h1>Healthy, beautiful smiles for <em>the whole family</em></h1>
+      <p>From your child's first orthodontic visit to specialist prosthodontic and restorative care, Dental Specialists Turramurra takes a warm, holistic approach to every smile that walks through our door.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-sand" href="/appointments/">Book an Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-white" href="/about-us/">Meet Our Team</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><strong data-count="25" data-suffix="+">25+</strong><small>Years of Experience</small></div>
+        <div class="trust-item"><strong data-count="10000" data-suffix="+">10,000+</strong><small>Procedures Completed</small></div>
+        <div class="trust-item"><strong>2 Specialties</strong><small>Orthodontics &amp; Prosthodontics</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Transparent name callout (scrolling) -->
+<div class="watermark" aria-hidden="true">
+  <div class="track">
+    <span>dental specialists turramurra</span><i class="dot"></i>
+    <span>orthodontics &amp; prosthodontics</span><i class="dot"></i>
+    <span>dental specialists turramurra</span><i class="dot"></i>
+    <span>orthodontics &amp; prosthodontics</span><i class="dot"></i>
+  </div>
+</div>
+
+<!-- Welcome -->
+<section class="welcome deco deco-flip">
+  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="wrap">
+    <div class="welcome-img reveal">
+      <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/home-schedule-img-jpg.webp" alt="The reception at Dental Specialists Turramurra">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Reputed Specialist Clinic</span>
+      <h2>Welcome to Dental Specialists Turramurra</h2>
+      <p>Dental Specialists Turramurra are regarded as one of the leading providers of exceptional high-quality dental care on Sydney's North Shore.</p>
+      <p>The difference we offer at DST is a comprehensive, holistic approach. While most dental specialists focus on specific clinical problems, we take a more global view to your restorative, implant, orthodontic and aesthetic dental care. By doing this, we also improve your general well-being.</p>
+      <a class="link-arrow" href="/about-us/">Read more about us <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Difference cards -->
+<section class="diff">
+  <div class="wrap">
+    <div class="diff-head reveal">
+      <span class="eyebrow" style="justify-content:center">The DST Difference</span>
+      <h2>Why families across the North Shore choose us</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card reveal">
+        <div class="diff-icon"><svg><use href="#i-family"/></svg></div>
+        <h3>Care for Every Age</h3>
+        <p>Orthodontic care for children, teens and adults, alongside specialist prosthodontic treatment — the whole family, looked after under one roof.</p>
+        <a class="link-arrow" href="/orthodontics/">Orthodontics <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="diff-card reveal">
+        <div class="diff-icon"><svg><use href="#i-card"/></svg></div>
+        <h3>Affordable Payment Plans</h3>
+        <p>Flexible payment options through DentiCare and Humm — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
+        <a class="link-arrow" href="/fees-payment/">Fees &amp; payment <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+      <div class="diff-card reveal">
+        <div class="diff-icon"><svg><use href="#i-award"/></svg></div>
+        <h3>Specialist Expertise</h3>
+        <p>A holistic, comprehensive approach from an experienced orthodontist and prosthodontist — one global view of your family's oral health.</p>
+        <a class="link-arrow" href="/about-us/">About our approach <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Specialist services -->
+<section class="deco">
+  <div class="deco-tooth tl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="wrap">
+    <div class="services-head reveal">
+      <div>
+        <span class="eyebrow">Specialist Services</span>
+        <h2>Orthodontic &amp; prosthodontic care, tailored to you</h2>
+      </div>
+      <a class="btn btn-ghost" href="/prosthodontics/">View All Services</a>
+    </div>
+    <div class="svc-grid">
+      <a class="svc-card reveal" href="/service/orthodontic-options/">
+        <span class="svc-tag">Orthodontics</span>
+        <h3>Orthodontic Options</h3>
+        <p>A range of orthodontic treatments — including Invisalign and Clarity ceramic braces — to help give you a straighter smile.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/service/cosmetic-dental-care/">
+        <span class="svc-tag">Prosthodontics</span>
+        <h3>Cosmetic Dental Care</h3>
+        <p>We are dedicated to our patients and always take the time to listen to your concerns and aspirations.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/service/anti-ageing-complex-restorative-dental-care/">
+        <span class="svc-tag">Prosthodontics</span>
+        <h3>Anti-ageing Restorative Care</h3>
+        <p>Ageing is a natural process — our complex restorative care helps protect and rejuvenate your smile at every stage of life.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/service/tmd-treatment/">
+        <span class="svc-tag">TMD</span>
+        <h3>Headaches &amp; Jaw Problems</h3>
+        <p>Immediate relief for your symptoms and long-term stability to minimise recurrence.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/service/sleep-apnoea-sleep-disorders/">
+        <span class="svc-tag">Sleep</span>
+        <h3>Sleep Apnoea &amp; Sleep Disorders</h3>
+        <p>We spend time with you and other specialists to determine the correct diagnosis, then provide a complete solution.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/turramurra/ems-airflow-guided-biofilm-therapy/">
+        <span class="svc-tag">Hygiene</span>
+        <h3>EMS Airflow Biofilm Therapy</h3>
+        <p>Gentle, modern guided biofilm therapy for a deeper, more comfortable professional clean.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Orthodontics for every age -->
+<section class="ages">
+  <div class="wrap">
+    <div class="ages-intro">
+      <div>
+        <span class="eyebrow">Orthodontics for Every Age</span>
+        <h2>Straighter smiles for kids, teens and parents alike</h2>
+        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our specialist orthodontist tailors every plan to the person in the chair.</p>
+      </div>
+      <div class="ages-photo reveal">
+        <img src="assets/kids-braces.jpg" alt="A young girl with braces smiling on her way to school">
+      </div>
+    </div>
+    <div class="ages-grid">
+      <a class="ages-card reveal" href="/turramurra/childrens-orthodontist/">
+        <div class="diff-icon"><svg><use href="#i-child"/></svg></div>
+        <h3>Orthodontics for Children</h3>
+        <p>Early assessment and treatment when it counts — and a fun, positive introduction to orthodontic care for the little ones.</p>
+        <span class="link-arrow">Kids overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="ages-card reveal" href="/turramurra/adults-orthodontist/">
+        <div class="diff-icon"><svg><use href="#i-adult"/></svg></div>
+        <h3>Orthodontics for Adults</h3>
+        <p>It's never too late for a straighter smile, with discreet modern options like Invisalign and Clarity ceramic braces.</p>
+        <span class="link-arrow">Adults overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="ages-card reveal" href="/turramurra/two-phase-treatment/">
+        <div class="diff-icon"><svg><use href="#i-phases"/></svg></div>
+        <h3>Two-Phase Treatment</h3>
+        <p>A staged approach for growing kids that guides jaw development early and finishes alignment in the teen years.</p>
+        <span class="link-arrow">How it works <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+    </div>
+    <div class="ages-cta">
+      <a class="btn btn-sand" href="/appointments/">Book Your Family's Next Visit <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-white" href="/turramurra/orthodontic-faqs/">Orthodontic FAQs</a>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="deco deco-flip">
+  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(242,166,90,.2)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="wrap">
+    <div class="team-head reveal">
+      <span class="eyebrow" style="justify-content:center">Our Team</span>
+      <h2>Specialists you'll actually get to know</h2>
+      <p>Please take the time to meet the team at our clinic. We will ensure your dental experience is enjoyable and your results exemplary.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="team-photo"><img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="Dr Kamini Titus, Orthodontist"></div>
+        <h3>Dr Kamini Titus</h3>
+        <small>Orthodontist</small>
+      </div>
+      <div class="team-card reveal">
+        <div class="team-photo"><img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/AA-001-scaled-1-rnzffkj8j8zhcdbb48voobo5sin1ooxblo2l5jvz4w.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
+        <h3>Clin. A/Prof Anthony Au</h3>
+        <small>Prosthodontist</small>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2.6rem"><a class="btn btn-ghost" href="/our-team/">Meet the Whole Team</a></div>
+  </div>
+</section>
+
+<!-- Aligner break strip -->
+<section class="break-strip">
+  <div class="wrap break-inner">
+    <div class="break-img reveal">
+      <img src="assets/adult-clear-aligner.jpg" alt="A woman smiling while holding her clear aligner">
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Clear Aligners</span>
+      <h2>Straighten your smile — without anyone noticing</h2>
+      <p>Nearly invisible options like Invisalign and Clarity ceramic braces mean treatment can fit quietly around busy work and family life. Most people won't even know you're wearing them.</p>
+      <div class="break-ctas">
+        <a class="btn btn-solid" href="/turramurra/invisalign/">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-ghost" href="/turramurra/orthodontic-options/">All Orthodontic Options</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Steps to affordable treatment -->
+<section class="steps">
+  <div class="wrap steps-inner">
+    <div class="reveal">
+      <span class="eyebrow">Fees &amp; Payment</span>
+      <h2>Simple steps to affordable treatment</h2>
+      <p class="lede">We understand the importance of maintaining optimal oral health, and we are dedicated to making top-notch specialist treatment affordable for you and your family.</p>
+      <div class="pay-logos">
+        <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/denticare-logo-300x58.jpg" alt="DentiCare payment plans">
+        <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/humm-logo-1-300x58.png" alt="Humm payment plans">
+      </div>
+    </div>
+    <div>
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <div><h3>Consultation</h3><p>Your journey begins with a consultation where we assess your unique needs, discuss your recommended treatment plan, and give you clear insight into expected fees.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <div><h3>Flexible Payment Options</h3><p>Choose from two convenient payment plan providers — DentiCare and Humm. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <div><h3>Begin Treatment</h3><p>Pick the plan that suits you best and kickstart your treatment journey. Don't let financial concerns hold you back from improving your health and quality of life.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visit us -->
+<section class="visit deco">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Visiting Us</span>
+      <h2>Scheduling your appointment is simple</h2>
+      <p>Call us on <strong>(02) 9488 7455</strong> during office hours. Outside office hours, leave a message and we'll get back to you promptly. If you have a dental emergency, contact us and we'll do our utmost to accommodate you.</p>
+      <ul>
+        <li><span class="check"><svg><use href="#i-check"/></svg></span>Suite 2, 1335 Pacific Highway, Turramurra — corner of Pacific Highway and Ray Street, next door to Chemist Warehouse</li>
+        <li><span class="check"><svg><use href="#i-check"/></svg></span>A short 2–3 minute walk from Turramurra station via Forbes Lane and Ray Street</li>
+        <li><span class="check"><svg><use href="#i-check"/></svg></span>Ample parking available on Ray Street and in the vicinity</li>
+      </ul>
+      <a class="btn btn-solid" href="/appointments/">Book Your Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="visit-img reveal">
+      <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/welcome-jpg.webp" alt="The entrance courtyard at Dental Specialists Turramurra">
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2>We'd love to meet your family</h2>
+      <p>Please complete the form and a member of our team will be in contact to assist you with your enquiry.</p>
+      <ul class="contact-list">
+        <li><a href="tel:0294887455"><span class="box"><svg><use href="#i-phone"/></svg></span>(02) 9488 7455</a></li>
+        <li><a href="mailto:admin@dentalspecialists.com.au"><span class="box"><svg><use href="#i-mail"/></svg></span>admin@dentalspecialists.com.au</a></li>
+        <li><a href="https://maps.app.goo.gl/VeDJdGs6MLog7qxz7" target="_blank" rel="noopener"><span class="box"><svg><use href="#i-pin"/></svg></span>Suite 2, 1335 Pacific Highway, Turramurra NSW 2074</a></li>
+        <li><a href="https://www.facebook.com/DentalSpecialistsTurramurra/" target="_blank" rel="noopener"><span class="box"><svg><use href="#i-facebook"/></svg></span>Facebook</a></li>
+        <li><a href="https://www.instagram.com/dentalspecialiststurramurra/" target="_blank" rel="noopener"><span class="box"><svg><use href="#i-instagram"/></svg></span>Instagram</a></li>
+      </ul>
+    </div>
+    <div class="form-card reveal">
+      <h3>Send us an enquiry</h3>
+      <div class="form-grid">
+        <div><label for="fn">First name</label><input id="fn" type="text" placeholder="Jane"></div>
+        <div><label for="ln">Last name</label><input id="ln" type="text" placeholder="Smith"></div>
+        <div><label for="em">Email</label><input id="em" type="email" placeholder="jane@email.com"></div>
+        <div><label for="ph">Phone</label><input id="ph" type="tel" placeholder="04XX XXX XXX"></div>
+        <div class="full"><label for="msg">How can we help?</label><textarea id="msg" rows="4" placeholder="Tell us a little about your enquiry…"></textarea></div>
+      </div>
+      <button class="btn btn-solid">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="logo"><img src="assets/logo-white.png" alt="Dental Specialists Turramurra" class="foot-logo"></a>
+        <p>Dental Specialists Turramurra are regarded as one of the leading providers of exceptional high-quality specialist dental care on Sydney's North Shore.</p>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/DentalSpecialistsTurramurra/" aria-label="Facebook" target="_blank" rel="noopener"><svg><use href="#i-facebook"/></svg></a>
+          <a href="https://www.instagram.com/dentalspecialiststurramurra/" aria-label="Instagram" target="_blank" rel="noopener"><svg><use href="#i-instagram"/></svg></a>
+          <a href="https://g.page/DentalSpecialistsofTurramurra?share" aria-label="Google" target="_blank" rel="noopener"><svg><use href="#i-google"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/orthodontics/">Orthodontics</a></li>
+          <li><a href="/prosthodontics/">Prosthodontics</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Orthodontics</h4>
+        <ul>
+          <li><a href="/turramurra/invisalign/">Invisalign</a></li>
+          <li><a href="/service/clarity-ceramic-braces/">Clarity Ceramic Braces</a></li>
+          <li><a href="/turramurra/two-phase-treatment/">Two-Phase Treatment</a></li>
+          <li><a href="/turramurra/childrens-orthodontist/">Orthodontics for Children</a></li>
+          <li><a href="/turramurra/adults-orthodontist/">Orthodontics for Adults</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Prosthodontics</h4>
+        <ul>
+          <li><a href="/turramurra/our-comprehensive-assessment/">Comprehensive Assessment</a></li>
+          <li><a href="/service/cosmetic-dental-care/">Cosmetic Dental Care</a></li>
+          <li><a href="/service/anti-ageing-complex-restorative-dental-care/">Anti-ageing Restorative Care</a></li>
+          <li><a href="/service/tmd-treatment/">Headaches &amp; Jaw Problems</a></li>
+          <li><a href="/turramurra/sleep-apnoea-sleep-disorders/">Sleep Apnoea &amp; Sleep Disorders</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Copyright © 2026. All rights reserved.</span>
+      <span>Website designed by <a href="https://generateyouraudience.com/" target="_blank" rel="noopener">Generate Your Audience</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal with per-card stagger (skipped when reduced motion preferred)
+const rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.diff-grid,.svc-grid,.ages-grid,.team-grid').forEach(grid=>{
+  [...grid.children].forEach((el,i)=>el.style.setProperty('--d', i % 3));
+});
+// Directional variants: split sections slide in from each side, images zoom in
+document.querySelectorAll('.welcome .wrap,.break-inner,.visit .wrap,.contact .wrap,.steps-inner,.ages-intro').forEach(split=>{
+  const kids = [...split.children].filter(el=>el.classList.contains('reveal')||el.querySelector?.('.reveal'));
+  [...split.children].forEach((el,i)=>{
+    if(!el.classList.contains('reveal')) el.classList.add('reveal');
+    el.classList.add(i===0?'reveal-left':'reveal-right');
+  });
+});
+document.querySelectorAll('.welcome-img,.visit-img,.break-img,.ages-photo,.team-photo').forEach(el=>{
+  el.closest('.reveal')?.classList.add('reveal-zoom');
+});
+if(!rm && 'IntersectionObserver' in window){
+  const io = new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}else{
+  document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'));
+}
+
+// Pause the watermark marquee when off-screen
+const track = document.querySelector('.watermark .track');
+if(track && 'IntersectionObserver' in window){
+  new IntersectionObserver(es=>es.forEach(e=>{
+    track.style.animationPlayState = e.isIntersecting ? 'running' : 'paused';
+  })).observe(track.parentElement);
+}
+
+// Animated counters in the hero
+if(!rm){
+  document.querySelectorAll('[data-count]').forEach(el=>{
+    const target = +el.dataset.count, suffix = el.dataset.suffix || '';
+    const dur = 1600, t0 = performance.now();
+    const tick = t=>{
+      const p = Math.min((t - t0)/dur, 1), ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * ease).toLocaleString() + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
+}
+
+// Transparent header: solid fixed bar after scrolling past the topbar
+const navBar = document.querySelector('header.nav');
+const setNav = () => navBar.classList.toggle('scrolled', window.scrollY > 120);
+setNav();
+window.addEventListener('scroll', setNav, {passive:true});
+
+// Gentle hero parallax
+const hero = document.querySelector('.hero');
+if(!rm && hero){
+  window.addEventListener('scroll',()=>{
+    const y = window.scrollY;
+    if(y < window.innerHeight) hero.style.backgroundPosition = `center calc(50% + ${y * .18}px)`;
+  },{passive:true});
+}
+</script>
+</body>
+</html>
