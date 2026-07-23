@@ -17,6 +17,15 @@ Practice photos and the hero banner are hotlinked from the current live site / S
 
 Open `index.html` directly, or enable GitHub Pages (Settings → Pages → deploy from branch) to share a live link.
 
+## Latest round (23 Jul)
+
+- New family hero banner; header, buttons and footer switched to logo blue (orange accent removed)
+- "Orthodontics for Every Age" moved directly after "Why families choose us"
+- Age cards rebuilt as Kids / Teens / Adults with photography; Dr Kamini now in the arch image
+- Invisalign Platinum Provider callout added inside the orthodontics section
+- Full-width Google Map added above the footer
+- New page needed: /turramurra/teens-orthodontist/ (linked from cards, mega menu and footer)
+
 ## Before go-live
 
 - Confirm hero stats (25+ years / 10,000+ procedures are placeholders)

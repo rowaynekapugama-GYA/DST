@@ -17,8 +17,8 @@
   --paper:#FAFCFC;
   --mist:#E6F2F5;          /* soft aqua tint */
   --mist-deep:#D2E6EC;
-  --sand:#F2A65A;          /* warm accent */
-  --sand-soft:#FCE9D4;
+  --sand:#7FD3E8;          /* light aqua accent (on dark) */
+  --sand-soft:#DFF3F8;
   --white:#FFFFFF;
   --radius-arch:200px;
   --shadow:0 18px 48px rgba(12,59,74,.12);
@@ -33,7 +33,8 @@ a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:var(--font-display);font-weight:500;font-style:italic;line-height:1.12;letter-spacing:-.005em}
 .step-num,.trust-item strong{font-style:normal}
 .eyebrow{font-family:var(--font-body);font-size:.78rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--teal);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:1rem}
-.eyebrow::before{content:"";width:26px;height:2px;background:var(--sand);border-radius:2px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--teal);border-radius:2px}
+.ages .eyebrow::before,.contact .eyebrow::before,.hero .eyebrow::before{background:var(--sand)}
 .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem)}
 section{padding:clamp(4rem,8vw,6.5rem) 0}
 .ic{display:inline-flex;flex:none}
@@ -45,41 +46,37 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .btn:hover svg{transform:translateX(3px)}
 .btn-solid{background:var(--teal);color:#fff}
 .btn-solid:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,135,165,.35)}
-.btn-sand{background:var(--sand);color:var(--ink)}
-.btn-sand:hover{background:#EC964A;transform:translateY(-2px);box-shadow:0 10px 24px rgba(242,166,90,.4)}
+.btn-sand{background:var(--teal);color:#fff}
+.btn-sand:hover{background:var(--teal-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(20,135,165,.42)}
 .btn-ghost{border:2px solid var(--teal);color:var(--teal)}
 .btn-ghost:hover{background:var(--teal);color:#fff}
 .btn-white{background:#fff;color:var(--ink)}
 .btn-white:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.2)}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--sand);outline-offset:3px;border-radius:6px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 
 /* ── Top bar + nav ─────────────────────────── */
-.topbar{background:var(--ink);color:#D7E8ED;font-size:.85rem;padding:.55rem 0}
+.topbar{background:var(--teal-dark);color:#DCF0F6;font-size:.85rem;padding:.55rem 0}
 .topbar .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .topbar a{display:inline-flex;align-items:center;gap:.45rem}
 .topbar a:hover{color:var(--sand)}
 .topbar .ic{width:15px;height:15px;color:var(--sand)}
 .topbar .hours{color:#9DBECA}
-header.nav{position:absolute;left:0;right:0;z-index:50;background:transparent;border-bottom:1px solid rgba(255,255,255,.16);transition:background .3s ease,box-shadow .3s ease,border-color .3s ease}
+header.nav{position:sticky;top:0;z-index:50;background:var(--teal);border-bottom:1px solid rgba(255,255,255,.16);box-shadow:0 6px 24px rgba(12,59,74,.14)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
 .logo{display:flex;align-items:center}
 .logo img{height:54px;width:auto}
 .logo .logo-dark{display:none}
-/* transparent state: white-wordmark logo + white links over the banner */
-header.nav.scrolled .logo .logo-light{display:none}
-header.nav.scrolled .logo .logo-dark{display:block}
-header.nav:not(.scrolled) nav ul a{color:#fff}
-header.nav:not(.scrolled) nav ul a:hover{color:var(--sand);border-color:var(--sand)}
-header.nav:not(.scrolled) .nav-phone{color:#fff}
-header.nav:not(.scrolled) .nav-phone:hover{color:var(--sand)}
-header.nav:not(.scrolled) .menu-btn span{background:#fff}
-/* scrolled state: fixed solid bar, original logo colours */
-header.nav.scrolled{position:fixed;top:0;background:rgba(250,252,252,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--mist-deep);box-shadow:0 8px 30px rgba(12,59,74,.08);animation:navDrop .35s ease}
-@keyframes navDrop{from{transform:translateY(-100%)}to{transform:none}}
+nav ul a{color:#fff}
+nav ul a:hover{color:#fff;border-color:#fff}
+.nav-phone{color:#fff}
+.nav-phone:hover{color:var(--sand)}
+.menu-btn span{background:#fff}
+header.nav .btn-sand{background:#fff;color:var(--teal)}
+header.nav .btn-sand:hover{background:var(--ink);color:#fff;box-shadow:0 10px 24px rgba(0,0,0,.22)}
 .foot-logo{height:52px;width:auto}
 nav ul{display:flex;gap:1.6rem;list-style:none;font-weight:600;font-size:.93rem}
 nav ul a{padding:.4rem 0;border-bottom:2px solid transparent}
-nav ul a:hover{border-color:var(--sand);color:var(--teal)}
+
 .nav-cta{display:flex;align-items:center;gap:1rem}
 .nav-phone{font-weight:700;font-size:.95rem;display:inline-flex;align-items:center;gap:.45rem;color:var(--teal)}
 .nav-phone .ic{width:17px;height:17px}
@@ -91,7 +88,7 @@ nav ul a:hover{border-color:var(--sand);color:var(--teal)}
 nav ul li{position:relative}
 nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;font-size:.65em;vertical-align:middle}
 .has-mega:hover > a .caret,.has-mega:focus-within > a .caret{transform:rotate(180deg)}
-.mega{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,10px);background:#fff;border-radius:22px;box-shadow:0 30px 70px rgba(12,59,74,.22);padding:1.4rem;display:grid;grid-template-columns:220px 1fr;gap:1.3rem;width:560px;opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60}
+.mega{position:absolute;top:calc(100% + 18px);left:50%;transform:translate(-50%,10px);background:#fff;border-radius:22px;box-shadow:0 30px 70px rgba(12,59,74,.22);padding:1.4rem;display:grid;grid-template-columns:220px 1fr;gap:1.3rem;width:560px;opacity:0;visibility:hidden;transition:opacity .22s ease,transform .22s ease,visibility .22s;z-index:60}
 .mega::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
 .has-mega:hover .mega,.has-mega:focus-within .mega{opacity:1;visibility:visible;transform:translate(-50%,0)}
 .mega-img{border-radius:16px;overflow:hidden;position:relative;min-height:220px}
@@ -108,7 +105,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .watermark{position:relative;z-index:5;margin-top:clamp(-3.4rem,-6vw,-2rem);pointer-events:none;overflow:hidden;line-height:1}
 .watermark .track{display:flex;align-items:center;gap:clamp(2rem,5vw,4rem);width:max-content;animation:marquee 46s linear infinite;will-change:transform}
 .watermark span{white-space:nowrap;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(3.4rem,10.5vw,8.5rem);letter-spacing:-.02em;color:rgba(20,135,165,.07);-webkit-text-stroke:1.5px rgba(20,135,165,.42)}
-.watermark .dot{width:clamp(.7rem,1.4vw,1.1rem);height:clamp(.7rem,1.4vw,1.1rem);border-radius:50%;background:rgba(242,166,90,.5);flex:none}
+.watermark .dot{width:clamp(.7rem,1.4vw,1.1rem);height:clamp(.7rem,1.4vw,1.1rem);border-radius:50%;background:rgba(20,135,165,.32);flex:none}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* ── Section effects ───────────────────────── */
@@ -120,7 +117,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .diff-icon{transition:transform .25s ease,background .25s ease}
 .diff-card:hover .diff-icon,.ages-card:hover .diff-icon{transform:translateY(-4px) rotate(-4deg)}
 .svc-card{position:relative;overflow:hidden}
-.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--sand));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--teal-dark));transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
 .svc-card:hover::before{transform:scaleX(1)}
 .welcome-img img,.visit-img img{transition:transform .5s ease}
 .welcome-img:hover img,.visit-img:hover img{transform:scale(1.04)}
@@ -129,7 +126,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .deco{position:relative;overflow:hidden}
 .deco > .wrap{position:relative;z-index:1}
 .deco::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(20,135,165,.09) 0%,transparent 65%);top:-160px;right:-140px;pointer-events:none}
-.deco::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(242,166,90,.10) 0%,transparent 65%);bottom:-140px;left:-120px;pointer-events:none}
+.deco::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(20,135,165,.07) 0%,transparent 65%);bottom:-140px;left:-120px;pointer-events:none}
 .deco-flip::before{right:auto;left:-140px}
 .deco-flip::after{left:auto;right:-120px}
 .deco-tooth{position:absolute;width:clamp(220px,26vw,360px);opacity:.5;pointer-events:none}
@@ -138,21 +135,21 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .deco-tooth.br{bottom:1.5rem;right:-70px;transform:rotate(11deg)}
 
 /* ── Hero ──────────────────────────────────── */
-.hero{position:relative;overflow:hidden;padding:clamp(8rem,15vw,12rem) 0 clamp(5rem,10vw,8rem);background:
+.hero{position:relative;overflow:hidden;padding:clamp(5rem,11vw,8.5rem) 0 clamp(4.5rem,9vw,7rem);background:
   linear-gradient(100deg,rgba(9,42,54,.88) 0%,rgba(12,59,74,.72) 42%,rgba(12,59,74,.25) 75%,rgba(12,59,74,.15) 100%),
-  url('https://smile-search-production-uploads-kmfcmkcr.s3.ap-southeast-2.amazonaws.com/images-gallery/1f0d3bf8-58ab-4e6b-8742-ef2bafb07dcd/turramurra/1784643255327-51gFrdsWxtoZsVyk1TuO9.jpg') center/cover no-repeat;
+  url('assets/hero-family-banner.jpg') center/cover no-repeat;
   color:#fff}
 .hero .eyebrow{color:#BFE0EA}
 .hero-inner{max-width:38rem}
 .hero h1{font-size:clamp(2.4rem,5.2vw,3.9rem);margin-bottom:1.3rem}
 .hero h1 em{font-style:italic;font-weight:600;position:relative;white-space:nowrap}
-.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--sand);z-index:-1;border-radius:4px;opacity:.9}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--sand);z-index:-1;border-radius:4px;opacity:.75}
 .hero p{font-size:1.12rem;color:#DCEBF0;margin-bottom:2rem}
 .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.6rem}
 .hero-trust{display:flex;gap:2.4rem;flex-wrap:wrap}
 .trust-item strong{font-family:var(--font-display);font-size:1.55rem;display:block}
 .trust-item small{font-size:.85rem;color:#BFD9E2;font-weight:600}
-.invis-badge{position:absolute;top:clamp(6rem,10vw,8rem);right:clamp(1.25rem,4vw,3rem);display:flex;align-items:center;gap:.85rem;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:.6rem 1.3rem .6rem .6rem;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.invis-badge{position:absolute;top:clamp(1.5rem,4vw,2.6rem);right:clamp(1.25rem,4vw,3rem);display:flex;align-items:center;gap:.85rem;background:rgba(255,255,255,.12);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:.6rem 1.3rem .6rem .6rem;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.22)}
 .invis-badge .medal{width:46px;height:46px;flex:none;border-radius:50%;background:linear-gradient(145deg,#E8ECEF 0%,#B9C4CC 45%,#8FA1AC 100%);display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 1px 2px rgba(255,255,255,.8),0 3px 8px rgba(0,0,0,.25)}
 .invis-badge .medal svg{width:24px;height:24px}
 .invis-badge strong{display:block;font-size:.95rem;line-height:1.15;font-family:var(--font-display);font-style:italic}
@@ -196,20 +193,32 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .svc-tag{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark);background:var(--mist);padding:.3rem .7rem;border-radius:999px;align-self:flex-start}
 
 /* ── Ages band ─────────────────────────────── */
-.ages{background:var(--ink);color:#EAF3F6}
+.ages{background:#0B4E62;color:#EAF3F6}
 .ages .eyebrow{color:#9CC9D6}
 .ages h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:36rem;margin-bottom:1rem;color:#fff}
 .ages p.lede{color:#B9D3DC;max-width:42rem;margin-bottom:2.6rem}
-.ages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem}
-.ages-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.13);border-radius:22px;padding:1.8rem 1.6rem;transition:background .2s;display:flex;flex-direction:column;gap:.6rem}
-.ages-card:hover{background:rgba(255,255,255,.12)}
-.ages-card .diff-icon{background:rgba(255,255,255,.1);color:var(--sand)}
-.ages-card h3{font-size:1.14rem;color:#fff}
-.ages-card p{font-size:.92rem;color:#B9D3DC;flex:1}
-.ages-card .link-arrow{color:var(--sand)}
+.ages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.age-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
+.age-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.12);box-shadow:0 22px 50px rgba(0,0,0,.3)}
+.age-img{position:relative;aspect-ratio:3/2;overflow:hidden}
+.age-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.age-card:hover .age-img img{transform:scale(1.06)}
+.age-label{position:absolute;left:.9rem;bottom:.9rem;background:rgba(20,135,165,.92);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.4rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
+.age-body{padding:1.6rem 1.5rem 1.8rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.age-body h3{font-size:1.18rem;color:#fff}
+.age-body p{font-size:.93rem;color:#B9D8E2;flex:1}
+.age-body .link-arrow{color:var(--sand)}
+.photo-tag{position:absolute;left:0;right:0;bottom:0;padding:2.4rem .9rem .85rem;background:linear-gradient(transparent,rgba(9,50,64,.9));color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-align:center}
+
+/* Invisalign Platinum strip */
+.invis-strip{margin-top:2.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:1.6rem 1.8rem}
+.invis-medal{width:58px;height:58px;flex:none;border-radius:50%;background:linear-gradient(145deg,#EDF1F3 0%,#B9C4CC 45%,#8FA1AC 100%);display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 1px 2px rgba(255,255,255,.85),0 4px 12px rgba(0,0,0,.3)}
+.invis-medal svg{width:30px;height:30px}
+.invis-copy strong{display:block;font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:#fff;margin-bottom:.25rem}
+.invis-copy p{font-size:.92rem;color:#B9D8E2;margin:0}
 .ages-cta{margin-top:2.6rem;display:flex;gap:1rem;flex-wrap:wrap}
 .ages-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:2.6rem}
-.ages-photo{border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);aspect-ratio:1/1;max-width:340px;justify-self:end}
+.ages-photo{position:relative;border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);aspect-ratio:1/1;max-width:340px;justify-self:end}
 .ages-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .ages-photo:hover img{transform:scale(1.05)}
 
@@ -259,7 +268,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .visit li .check svg{width:13px;height:13px}
 
 /* ── Contact band ──────────────────────────── */
-.contact{background:var(--ink);color:#EAF3F6}
+.contact{background:#0B4E62;color:#EAF3F6}
 .contact .eyebrow{color:#9CC9D6}
 .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4rem);align-items:start}
 .contact h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:1rem;color:#fff}
@@ -279,18 +288,31 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .form-card button{margin-top:1.3rem;width:100%;justify-content:center;border:none;cursor:pointer;font-family:var(--font-body)}
 
 /* ── Footer ────────────────────────────────── */
-footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
+footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2rem}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
 .foot-grid h4{color:#fff;font-family:var(--font-body);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
 .foot-grid ul{list-style:none;display:grid;gap:.55rem}
-.foot-grid a:hover{color:var(--sand)}
+.foot-grid a:hover{color:#fff;text-decoration:underline}
 .foot-brand p{margin:1.2rem 0 1.4rem;max-width:22rem}
 .foot-social{display:flex;gap:.7rem}
-.foot-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center}
+.foot-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;display:grid;place-items:center}
 .foot-social a svg{width:17px;height:17px}
-.foot-social a:hover{background:var(--sand);color:var(--ink)}
-.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem}
+.foot-social a:hover{background:#fff;color:var(--teal)}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.22);padding-top:1.6rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem}
 .foot-bottom a{text-decoration:underline}
+
+
+/* ── Full-width map ────────────────────────── */
+.map-band{position:relative;line-height:0;background:var(--mist)}
+.map-band iframe{width:100%;height:clamp(320px,42vw,460px);border:0;display:block;filter:saturate(.92)}
+.map-card{position:absolute;top:50%;left:clamp(1.25rem,7vw,6rem);transform:translateY(-50%);background:#fff;border-radius:22px;box-shadow:0 24px 60px rgba(12,59,74,.28);padding:1.8rem 1.9rem;max-width:340px;line-height:1.6}
+.map-card h3{font-size:1.35rem;margin-bottom:.7rem}
+.map-card p{font-size:.94rem;color:var(--ink-soft);margin-bottom:1.2rem}
+.map-card .btn{width:100%;justify-content:center}
+@media (max-width:760px){
+  .map-card{position:static;transform:none;max-width:none;border-radius:0;box-shadow:none;text-align:center}
+  .map-band iframe{height:300px}
+}
 
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(36px);filter:blur(3px);transition:opacity .85s cubic-bezier(.22,1,.36,1),transform .85s cubic-bezier(.22,1,.36,1),filter .85s cubic-bezier(.22,1,.36,1)}
@@ -309,6 +331,8 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
   .welcome .wrap,.steps-inner,.visit .wrap,.contact .wrap,.break-inner,.ages-intro{grid-template-columns:1fr}
   .ages-photo{justify-self:start;max-width:300px}
   .diff-grid,.svc-grid,.ages-grid{grid-template-columns:1fr 1fr}
+  .invis-strip{grid-template-columns:auto 1fr;text-align:left}
+  .invis-strip .btn{grid-column:1/-1;justify-self:start}
   .team-grid{grid-template-columns:1fr 1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   nav ul{display:none}
@@ -317,6 +341,8 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
 }
 @media (max-width:600px){
   .diff-grid,.svc-grid,.ages-grid,.team-grid,.form-grid,.foot-grid{grid-template-columns:1fr}
+  .invis-strip{grid-template-columns:1fr;text-align:center;justify-items:center}
+  .invis-strip .btn{justify-self:center}
   .topbar .hours{display:none}
   .logo img{height:44px}
 }
@@ -382,6 +408,7 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
             </a>
             <div class="mega-links">
               <a href="/turramurra/childrens-orthodontist/"><strong>Orthodontics for Children</strong><small>Early assessment &amp; a fun first visit</small></a>
+              <a href="/turramurra/teens-orthodontist/"><strong>Orthodontics for Teens</strong><small>Braces and clear aligners for teens</small></a>
               <a href="/turramurra/adults-orthodontist/"><strong>Orthodontics for Adults</strong><small>Discreet modern straightening options</small></a>
               <a href="/turramurra/two-phase-treatment/"><strong>Two-Phase Treatment</strong><small>Staged care for growing kids</small></a>
               <a href="/turramurra/invisalign/"><strong>Invisalign</strong><small>Nearly invisible clear aligners</small></a>
@@ -511,6 +538,65 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
   </div>
 </section>
 
+<!-- Orthodontics for every age -->
+<section class="ages">
+  <div class="wrap">
+    <div class="ages-intro">
+      <div>
+        <span class="eyebrow">Orthodontics for Every Age</span>
+        <h2>Straighter smiles for kids, teens and parents alike</h2>
+        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our specialist orthodontist Dr Kamini Titus tailors every plan to the person in the chair.</p>
+      </div>
+      <div class="ages-photo reveal">
+        <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="Dr Kamini Titus, Orthodontist at Dental Specialists Turramurra">
+        <span class="photo-tag">Dr Kamini Titus · Orthodontist</span>
+      </div>
+    </div>
+
+    <div class="ages-grid">
+      <a class="age-card reveal" href="/turramurra/childrens-orthodontist/">
+        <div class="age-img"><img src="assets/ortho-kids.jpg" alt="A young girl with braces smiling outdoors"><span class="age-label">Kids Orthodontics</span></div>
+        <div class="age-body">
+          <h3>Orthodontics for Kids</h3>
+          <p>Early assessment from around age 7 — guiding jaw growth while it's easy, and making that first visit a fun one.</p>
+          <span class="link-arrow">Kids overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+        </div>
+      </a>
+      <a class="age-card reveal" href="/turramurra/teens-orthodontist/">
+        <div class="age-img"><img src="assets/ortho-teens.jpg" alt="A teenage boy smiling with braces"><span class="age-label">Teen Orthodontics</span></div>
+        <div class="age-body">
+          <h3>Orthodontics for Teens</h3>
+          <p>The classic age for treatment — from traditional and ceramic braces through to Invisalign clear aligners.</p>
+          <span class="link-arrow">Teens overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+        </div>
+      </a>
+      <a class="age-card reveal" href="/turramurra/adults-orthodontist/">
+        <div class="age-img"><img src="assets/ortho-adults.jpg" alt="A woman placing a clear aligner"><span class="age-label">Adult Orthodontics</span></div>
+        <div class="age-body">
+          <h3>Orthodontics for Adults</h3>
+          <p>It's never too late for a straighter smile, with discreet modern options that fit around work and family life.</p>
+          <span class="link-arrow">Adults overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Invisalign Platinum Provider callout -->
+    <div class="invis-strip reveal">
+      <span class="invis-medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
+      <div class="invis-copy">
+        <strong>Invisalign<sup>&reg;</sup> Platinum Provider</strong>
+        <p>Platinum status is awarded to practices with significant Invisalign case experience — so you're in genuinely practised hands, whether it's your teen's first aligners or your own.</p>
+      </div>
+      <a class="btn btn-white" href="/turramurra/invisalign/">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+
+    <div class="ages-cta">
+      <a class="btn btn-sand" href="/appointments/">Book Your Family's Next Visit <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-white" href="/turramurra/orthodontic-faqs/">Orthodontic FAQs</a>
+    </div>
+  </div>
+</section>
+
 <!-- Specialist services -->
 <section class="deco">
   <div class="deco-tooth tl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
@@ -563,49 +649,9 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
   </div>
 </section>
 
-<!-- Orthodontics for every age -->
-<section class="ages">
-  <div class="wrap">
-    <div class="ages-intro">
-      <div>
-        <span class="eyebrow">Orthodontics for Every Age</span>
-        <h2>Straighter smiles for kids, teens and parents alike</h2>
-        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our specialist orthodontist tailors every plan to the person in the chair.</p>
-      </div>
-      <div class="ages-photo reveal">
-        <img src="assets/kids-braces.jpg" alt="A young girl with braces smiling on her way to school">
-      </div>
-    </div>
-    <div class="ages-grid">
-      <a class="ages-card reveal" href="/turramurra/childrens-orthodontist/">
-        <div class="diff-icon"><svg><use href="#i-child"/></svg></div>
-        <h3>Orthodontics for Children</h3>
-        <p>Early assessment and treatment when it counts — and a fun, positive introduction to orthodontic care for the little ones.</p>
-        <span class="link-arrow">Kids overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="ages-card reveal" href="/turramurra/adults-orthodontist/">
-        <div class="diff-icon"><svg><use href="#i-adult"/></svg></div>
-        <h3>Orthodontics for Adults</h3>
-        <p>It's never too late for a straighter smile, with discreet modern options like Invisalign and Clarity ceramic braces.</p>
-        <span class="link-arrow">Adults overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="ages-card reveal" href="/turramurra/two-phase-treatment/">
-        <div class="diff-icon"><svg><use href="#i-phases"/></svg></div>
-        <h3>Two-Phase Treatment</h3>
-        <p>A staged approach for growing kids that guides jaw development early and finishes alignment in the teen years.</p>
-        <span class="link-arrow">How it works <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-    </div>
-    <div class="ages-cta">
-      <a class="btn btn-sand" href="/appointments/">Book Your Family's Next Visit <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-white" href="/turramurra/orthodontic-faqs/">Orthodontic FAQs</a>
-    </div>
-  </div>
-</section>
-
 <!-- Team -->
 <section class="deco deco-flip">
-  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(242,166,90,.2)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.12)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
   <div class="wrap">
     <div class="team-head reveal">
       <span class="eyebrow" style="justify-content:center">Our Team</span>
@@ -724,6 +770,19 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
   </div>
 </section>
 
+<!-- Full-width map -->
+<section class="map-band">
+  <iframe
+    src="https://www.google.com/maps?q=Suite%202%2C%201335%20Pacific%20Highway%2C%20Turramurra%20NSW%202074&output=embed"
+    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    title="Map showing Dental Specialists Turramurra, Suite 2, 1335 Pacific Highway, Turramurra NSW 2074"></iframe>
+  <div class="map-card">
+    <h3>Find us in Turramurra</h3>
+    <p>Suite 2, 1335 Pacific Highway — on the corner of Ray Street, next door to Chemist Warehouse. Two minutes' walk from Turramurra station, with parking on Ray Street.</p>
+    <a class="btn btn-sand" href="https://maps.app.goo.gl/VeDJdGs6MLog7qxz7" target="_blank" rel="noopener">Get Directions <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
 <!-- Footer -->
 <footer>
   <div class="wrap">
@@ -754,6 +813,7 @@ footer{background:#082A36;color:#9BBAC5;font-size:.92rem;padding:3.5rem 0 2rem}
           <li><a href="/service/clarity-ceramic-braces/">Clarity Ceramic Braces</a></li>
           <li><a href="/turramurra/two-phase-treatment/">Two-Phase Treatment</a></li>
           <li><a href="/turramurra/childrens-orthodontist/">Orthodontics for Children</a></li>
+          <li><a href="/turramurra/teens-orthodontist/">Orthodontics for Teens</a></li>
           <li><a href="/turramurra/adults-orthodontist/">Orthodontics for Adults</a></li>
         </ul>
       </div>
