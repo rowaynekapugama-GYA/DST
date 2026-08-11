@@ -104,7 +104,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 /* ── Watermark name (scrolling marquee) ────── */
 .watermark{position:relative;z-index:5;margin-top:clamp(-3.4rem,-6vw,-2rem);pointer-events:none;overflow:hidden;line-height:1}
 .watermark .track{display:flex;align-items:center;gap:clamp(2rem,5vw,4rem);width:max-content;animation:marquee 46s linear infinite;will-change:transform}
-.watermark span{white-space:nowrap;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(3.4rem,10.5vw,8.5rem);letter-spacing:-.02em;color:rgba(20,135,165,.07);-webkit-text-stroke:1.5px rgba(20,135,165,.42)}
+.watermark span{white-space:nowrap;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(3.4rem,10.5vw,8.5rem);letter-spacing:-.02em;color:rgba(20,135,165,.16)}
 .watermark .dot{width:clamp(.7rem,1.4vw,1.1rem);height:clamp(.7rem,1.4vw,1.1rem);border-radius:50%;background:rgba(20,135,165,.32);flex:none}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
@@ -149,16 +149,16 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .gallery-head{text-align:center;max-width:42rem;margin:0 auto 3rem}
 .gallery-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.8rem}
 .gallery-head p{color:var(--ink-soft)}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:1.1rem}
-.g-item{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 10px 30px rgba(12,59,74,.1);margin:0}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:300px;grid-auto-flow:dense;gap:1.2rem}
+.g-item{position:relative;overflow:hidden;border-radius:22px;box-shadow:0 12px 34px rgba(12,59,74,.12);margin:0}
 .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
-.g-item:hover img{transform:scale(1.07)}
-.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .8rem;background:linear-gradient(transparent,rgba(12,59,74,.82));color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.04em;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
+.g-item:hover img{transform:scale(1.06)}
+.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem 1.1rem 1rem;background:linear-gradient(transparent,rgba(12,59,74,.85));color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.04em;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
 .g-item:hover figcaption{opacity:1;transform:none}
 .g-tall{grid-row:span 2}
 .g-wide{grid-column:span 2}
 @media (max-width:760px){
-  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px;gap:.8rem}
   .g-tall{grid-row:span 2}.g-wide{grid-column:span 2}
 }
 
@@ -188,7 +188,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 
 /* ── Welcome ───────────────────────────────── */
 .welcome .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(2.5rem,5vw,5rem);align-items:center}
-.welcome-img{border-radius:var(--radius-arch) var(--radius-arch) 24px 24px;overflow:hidden;box-shadow:var(--shadow)}
+.welcome-img{border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
 .welcome h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1.2rem}
 .welcome p{color:var(--ink-soft);margin-bottom:1.1rem}
 .link-arrow{font-weight:700;font-size:.92rem;display:inline-flex;align-items:center;gap:.4rem;color:var(--teal)}
@@ -246,9 +246,9 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .invis-copy p{font-size:.92rem;color:#B9D8E2;margin:0}
 .ages-cta{margin-top:2.6rem;display:flex;gap:1rem;flex-wrap:wrap}
 .ages-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:2.6rem}
-.ages-photo{position:relative;border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);aspect-ratio:1/1;max-width:340px;justify-self:end}
-.ages-photo img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
-.ages-photo:hover img{transform:scale(1.05)}
+.ages-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-width:380px;justify-self:end}
+.ages-photo img{width:100%;height:auto;display:block;transition:transform .5s ease}
+.ages-photo:hover img{transform:scale(1.03)}
 
 /* ── Break strip ───────────────────────────── */
 .break-strip{background:linear-gradient(180deg,var(--paper) 0%,var(--mist) 100%)}
@@ -266,7 +266,7 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .team-head p{color:var(--ink-soft)}
 .team-grid{display:grid;grid-template-columns:repeat(2,minmax(0,360px));justify-content:center;gap:2.5rem}
 .team-card{text-align:center}
-.team-photo{border-radius:var(--radius-arch) var(--radius-arch) 22px 22px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.2rem;aspect-ratio:4/5;background:var(--mist)}
+.team-photo{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);margin-bottom:1.2rem;aspect-ratio:3/4;background:var(--mist)}
 .team-photo img{width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .team-card:hover .team-photo img{transform:scale(1.04)}
 .team-card h3{font-size:1.25rem}
@@ -280,9 +280,8 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .pay-logos{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
 .pay-logos img{height:38px;width:auto;background:#fff;border-radius:12px;padding:.5rem .9rem;box-shadow:0 6px 16px rgba(12,59,74,.07)}
 .pay-chip{height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0 1.1rem;border-radius:12px;background:#fff;box-shadow:0 6px 16px rgba(12,59,74,.07);font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
-.pay-zip{color:#1A0DAB;font-family:var(--font-body)}
-.pay-medipay{color:#00A9A5;font-family:var(--font-body);font-size:1rem;letter-spacing:0}
-.pay-medipay span{color:#0C3B4A}
+.pay-zip-logo{height:34px !important;width:auto;background:#fff;border-radius:12px;padding:.55rem .9rem !important;box-shadow:0 6px 16px rgba(12,59,74,.07)}
+.pay-medipay-logo{height:52px !important;width:auto;background:#fff;border-radius:12px;padding:.4rem .9rem !important;box-shadow:0 6px 16px rgba(12,59,74,.07)}
 .step{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.5rem 0;border-bottom:1.5px solid var(--mist-deep)}
 .step:last-child{border-bottom:none}
 .step-num{font-family:var(--font-display);font-size:1.5rem;width:54px;height:54px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px rgba(12,59,74,.08)}
@@ -585,7 +584,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
         <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our Specialist Orthodontist Dr Kamini Titus tailors every plan to the person in the chair.</p>
       </div>
       <div class="ages-photo reveal">
-        <img src="assets/dr-kamini-titus.jpg" alt="Dr Kamini Titus, Specialist Orthodontist at Dental Specialists Turramurra">
+        <img src="assets/dr-kamini-titus-full.jpg" alt="Dr Kamini Titus, Specialist Orthodontist at Dental Specialists Turramurra">
         <span class="photo-tag">Dr Kamini Titus · Specialist Orthodontist</span>
       </div>
     </div>
@@ -709,12 +708,12 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-photo"><img src="assets/dr-kamini-titus.jpg" alt="Dr Kamini Titus, Specialist Orthodontist"></div>
+        <div class="team-photo"><img src="assets/team-kamini.jpg" alt="Dr Kamini Titus, Specialist Orthodontist"></div>
         <h3>Dr Kamini Titus</h3>
         <small>Specialist Orthodontist</small>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="assets/dr-anthony-au.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
+        <div class="team-photo"><img src="assets/team-anthony.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
         <h3>Clin. A/Prof Anthony Au</h3>
         <small>Prosthodontist</small>
       </div>
@@ -738,7 +737,9 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       <figure class="g-item g-tall reveal"><img src="assets/practice-reception.jpg" alt="Marble reception desk at Dental Specialists Turramurra"><figcaption>Reception</figcaption></figure>
       <figure class="g-item reveal"><img src="assets/practice-surgery.jpg" alt="A modern treatment surgery"><figcaption>Treatment surgery</figcaption></figure>
       <figure class="g-item reveal"><img src="assets/practice-kids-room.jpg" alt="Child-friendly treatment room"><figcaption>Kids' room</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/practice-red-nook.jpg" alt="Reception seating with feature red wall"><figcaption>Reception lounge</figcaption></figure>
       <figure class="g-item reveal"><img src="assets/practice-waiting.jpg" alt="Comfortable waiting lounge"><figcaption>Waiting lounge</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/practice-entrance.jpg" alt="The welcoming entrance courtyard"><figcaption>Entrance</figcaption></figure>
       <figure class="g-item g-wide reveal"><img src="assets/practice-exterior.jpg" alt="The practice exterior on Pacific Highway"><figcaption>Our Turramurra practice</figcaption></figure>
     </div>
   </div>
@@ -772,8 +773,8 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       <div class="pay-logos">
         <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/denticare-logo-300x58.jpg" alt="DentiCare payment plans">
         <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/humm-logo-1-300x58.png" alt="Humm payment plans">
-        <span class="pay-chip pay-zip" role="img" aria-label="Zip Pay">zip</span>
-        <span class="pay-chip pay-medipay" role="img" aria-label="Medipay"><span>medi</span>pay</span>
+        <img src="assets/zip-logo.svg" alt="Zip Pay" class="pay-zip-logo">
+        <img src="assets/medipay-logo.png" alt="Medipay" class="pay-medipay-logo">
       </div>
     </div>
     <div>
