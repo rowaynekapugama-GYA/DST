@@ -134,6 +134,34 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .deco-tooth.tl{top:2rem;left:-60px;transform:rotate(-14deg)}
 .deco-tooth.br{bottom:1.5rem;right:-70px;transform:rotate(11deg)}
 
+/* ── Fun graphics: sparkles + floating teeth ── */
+@keyframes floaty{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-14px) rotate(var(--r,0deg))}}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.85)}50%{opacity:1;transform:scale(1.1)}}
+.deco-sparkle{position:absolute;pointer-events:none;z-index:0}
+.deco-sparkle svg{width:100%;height:100%;display:block}
+.deco-sparkle.s1{width:38px;height:38px;top:14%;right:9%;animation:twinkle 3.4s ease-in-out infinite}
+.deco-sparkle.s2{width:26px;height:26px;bottom:20%;left:7%;animation:twinkle 2.6s ease-in-out infinite .6s}
+.float-tooth{position:absolute;pointer-events:none;z-index:0;opacity:.9}
+.float-tooth svg{width:100%;height:100%;display:block}
+@media (prefers-reduced-motion:reduce){.deco-sparkle,.float-tooth{animation:none!important}}
+
+/* ── Practice gallery ──────────────────────── */
+.gallery-head{text-align:center;max-width:42rem;margin:0 auto 3rem}
+.gallery-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.8rem}
+.gallery-head p{color:var(--ink-soft)}
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:1.1rem}
+.g-item{position:relative;overflow:hidden;border-radius:20px;box-shadow:0 10px 30px rgba(12,59,74,.1);margin:0}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.g-item:hover img{transform:scale(1.07)}
+.g-item figcaption{position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .8rem;background:linear-gradient(transparent,rgba(12,59,74,.82));color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.04em;opacity:0;transform:translateY(8px);transition:opacity .3s ease,transform .3s ease}
+.g-item:hover figcaption{opacity:1;transform:none}
+.g-tall{grid-row:span 2}
+.g-wide{grid-column:span 2}
+@media (max-width:760px){
+  .gallery-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .g-tall{grid-row:span 2}.g-wide{grid-column:span 2}
+}
+
 /* ── Hero ──────────────────────────────────── */
 .hero{position:relative;overflow:hidden;padding:clamp(5rem,11vw,8.5rem) 0 clamp(4.5rem,9vw,7rem);background:
   linear-gradient(100deg,rgba(9,42,54,.88) 0%,rgba(12,59,74,.72) 42%,rgba(12,59,74,.25) 75%,rgba(12,59,74,.15) 100%),
@@ -251,6 +279,10 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .steps .lede{color:var(--ink-soft);margin-bottom:1.6rem}
 .pay-logos{display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
 .pay-logos img{height:38px;width:auto;background:#fff;border-radius:12px;padding:.5rem .9rem;box-shadow:0 6px 16px rgba(12,59,74,.07)}
+.pay-chip{height:38px;display:inline-flex;align-items:center;justify-content:center;padding:0 1.1rem;border-radius:12px;background:#fff;box-shadow:0 6px 16px rgba(12,59,74,.07);font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+.pay-zip{color:#1A0DAB;font-family:var(--font-body)}
+.pay-medipay{color:#00A9A5;font-family:var(--font-body);font-size:1rem;letter-spacing:0}
+.pay-medipay span{color:#0C3B4A}
 .step{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.5rem 0;border-bottom:1.5px solid var(--mist-deep)}
 .step:last-child{border-bottom:none}
 .step-num{font-family:var(--font-display);font-size:1.5rem;width:54px;height:54px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px rgba(12,59,74,.08)}
@@ -403,7 +435,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
           <a href="/orthodontics/">Orthodontics<span class="caret">▾</span></a>
           <div class="mega" role="menu">
             <a class="mega-img" href="/orthodontics/">
-              <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="">
+              <img src="assets/dr-kamini-titus.jpg" alt="">
               <span>Orthodontics with Dr Kamini Titus</span>
             </a>
             <div class="mega-links">
@@ -421,7 +453,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
           <a href="/prosthodontics/">Prosthodontics<span class="caret">▾</span></a>
           <div class="mega" role="menu">
             <a class="mega-img" href="/prosthodontics/">
-              <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/AA-001-scaled-1-rnzffkj8j8zhcdbb48voobo5sin1ooxblo2l5jvz4w.jpg" alt="">
+              <img src="assets/dr-anthony-au.jpg" alt="">
               <span>Prosthodontics with Clin. A/Prof Anthony Au</span>
             </a>
             <div class="mega-links">
@@ -439,7 +471,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
           <div class="mega mega-sm" role="menu">
             <div class="mega-links">
               <a href="/appointments/"><strong>Appointments</strong><small>How to book your visit</small></a>
-              <a href="/fees-payment/"><strong>Fees &amp; Payment</strong><small>DentiCare, Humm &amp; Afterpay options</small></a>
+              <a href="/fees-payment/"><strong>Fees &amp; Payment</strong><small>DentiCare, Humm, Zip Pay &amp; Medipay</small></a>
               <a href="/your-welcome-pack-and-registration/"><strong>Welcome Pack &amp; Registration</strong><small>Everything for your first visit</small></a>
               <a href="/follow-up-care/"><strong>Follow Up Care</strong><small>Looking after your results</small></a>
               <a href="/contact-us/doctor-referrals/"><strong>Doctor Referrals</strong><small>Information for referring clinicians</small></a>
@@ -459,6 +491,9 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
 
 <!-- Hero -->
 <section class="hero">
+  <div class="float-tooth" style="width:70px;height:70px;top:22%;left:6%;--r:-12deg;animation:floaty 6s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="deco-sparkle" style="width:30px;height:30px;top:30%;left:2%;animation:twinkle 3s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.5)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
+  <div class="deco-sparkle" style="width:22px;height:22px;bottom:26%;left:9%;animation:twinkle 2.4s ease-in-out infinite .5s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,.35)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
   <a class="invis-badge" href="/turramurra/invisalign/" aria-label="Invisalign Platinum Provider — learn about Invisalign at DST">
     <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
     <span><small>Platinum Provider</small><strong>Invisalign<sup>®</sup></strong></span>
@@ -496,7 +531,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
   <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
   <div class="wrap">
     <div class="welcome-img reveal">
-      <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/home-schedule-img-jpg.webp" alt="The reception at Dental Specialists Turramurra">
+      <img src="assets/practice-reception.jpg" alt="The marble reception at Dental Specialists Turramurra">
     </div>
     <div class="reveal">
       <span class="eyebrow">Reputed Specialist Clinic</span>
@@ -525,13 +560,13 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       <div class="diff-card reveal">
         <div class="diff-icon"><svg><use href="#i-card"/></svg></div>
         <h3>Affordable Payment Plans</h3>
-        <p>Flexible payment options through DentiCare and Humm — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
+        <p>Flexible payment options through DentiCare, Humm, Zip Pay and Medipay — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
         <a class="link-arrow" href="/fees-payment/">Fees &amp; payment <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
       </div>
       <div class="diff-card reveal">
         <div class="diff-icon"><svg><use href="#i-award"/></svg></div>
         <h3>Specialist Expertise</h3>
-        <p>A holistic, comprehensive approach from an experienced orthodontist and prosthodontist — one global view of your family's oral health.</p>
+        <p>A holistic, comprehensive approach from an experienced Specialist Orthodontist and Prosthodontist — one global view of your family's oral health.</p>
         <a class="link-arrow" href="/about-us/">About our approach <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
       </div>
     </div>
@@ -540,16 +575,18 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
 
 <!-- Orthodontics for every age -->
 <section class="ages">
+  <div class="float-tooth" style="width:80px;height:80px;top:8%;right:4%;--r:10deg;animation:floaty 7s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(127,211,232,.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="deco-sparkle" style="width:28px;height:28px;bottom:12%;left:3%;animation:twinkle 3.2s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.4)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
   <div class="wrap">
     <div class="ages-intro">
       <div>
         <span class="eyebrow">Orthodontics for Every Age</span>
         <h2>Straighter smiles for kids, teens and parents alike</h2>
-        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our specialist orthodontist Dr Kamini Titus tailors every plan to the person in the chair.</p>
+        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our Specialist Orthodontist Dr Kamini Titus tailors every plan to the person in the chair.</p>
       </div>
       <div class="ages-photo reveal">
-        <img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="Dr Kamini Titus, Orthodontist at Dental Specialists Turramurra">
-        <span class="photo-tag">Dr Kamini Titus · Orthodontist</span>
+        <img src="assets/dr-kamini-titus.jpg" alt="Dr Kamini Titus, Specialist Orthodontist at Dental Specialists Turramurra">
+        <span class="photo-tag">Dr Kamini Titus · Specialist Orthodontist</span>
       </div>
     </div>
 
@@ -645,6 +682,18 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
         <p>Gentle, modern guided biofilm therapy for a deeper, more comfortable professional clean.</p>
         <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
       </a>
+      <a class="svc-card reveal" href="/service/teeth-whitening/">
+        <span class="svc-tag">Cosmetic</span>
+        <h3>Teeth Whitening</h3>
+        <p>Professional whitening for a brighter, more confident smile — safely supervised and tailored to you.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
+      <a class="svc-card reveal" href="/service/custom-mouthguards/">
+        <span class="svc-tag">Protection</span>
+        <h3>Custom Mouthguards</h3>
+        <p>Custom-fitted mouthguards that protect teeth during sport far better than any off-the-shelf option.</p>
+        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -660,17 +709,38 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-photo"><img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/Dr-Kamini-Titus-scaled-1-rnzfffu1l2t1qbi4voujtuuutla7m7enx0t5r62y00.jpg" alt="Dr Kamini Titus, Orthodontist"></div>
+        <div class="team-photo"><img src="assets/dr-kamini-titus.jpg" alt="Dr Kamini Titus, Specialist Orthodontist"></div>
         <h3>Dr Kamini Titus</h3>
-        <small>Orthodontist</small>
+        <small>Specialist Orthodontist</small>
       </div>
       <div class="team-card reveal">
-        <div class="team-photo"><img src="https://dentalspecialists.com.au/wp-content/uploads/elementor/thumbs/AA-001-scaled-1-rnzffkj8j8zhcdbb48voobo5sin1ooxblo2l5jvz4w.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
+        <div class="team-photo"><img src="assets/dr-anthony-au.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
         <h3>Clin. A/Prof Anthony Au</h3>
         <small>Prosthodontist</small>
       </div>
     </div>
     <div style="text-align:center;margin-top:2.6rem"><a class="btn btn-ghost" href="/our-team/">Meet the Whole Team</a></div>
+  </div>
+</section>
+
+
+<!-- Practice gallery -->
+<section class="gallery deco">
+  <div class="deco-sparkle s1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(20,135,165,.16)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
+  <div class="deco-sparkle s2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.4)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
+  <div class="wrap">
+    <div class="gallery-head reveal">
+      <span class="eyebrow" style="justify-content:center">Inside the Practice</span>
+      <h2>A calm, welcoming space on Pacific Highway</h2>
+      <p>From our light-filled surgeries to a comfortable waiting lounge, we've created a relaxed environment the whole family can feel at ease in.</p>
+    </div>
+    <div class="gallery-grid">
+      <figure class="g-item g-tall reveal"><img src="assets/practice-reception.jpg" alt="Marble reception desk at Dental Specialists Turramurra"><figcaption>Reception</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/practice-surgery.jpg" alt="A modern treatment surgery"><figcaption>Treatment surgery</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/practice-kids-room.jpg" alt="Child-friendly treatment room"><figcaption>Kids' room</figcaption></figure>
+      <figure class="g-item reveal"><img src="assets/practice-waiting.jpg" alt="Comfortable waiting lounge"><figcaption>Waiting lounge</figcaption></figure>
+      <figure class="g-item g-wide reveal"><img src="assets/practice-exterior.jpg" alt="The practice exterior on Pacific Highway"><figcaption>Our Turramurra practice</figcaption></figure>
+    </div>
   </div>
 </section>
 
@@ -702,6 +772,8 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       <div class="pay-logos">
         <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/denticare-logo-300x58.jpg" alt="DentiCare payment plans">
         <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/humm-logo-1-300x58.png" alt="Humm payment plans">
+        <span class="pay-chip pay-zip" role="img" aria-label="Zip Pay">zip</span>
+        <span class="pay-chip pay-medipay" role="img" aria-label="Medipay"><span>medi</span>pay</span>
       </div>
     </div>
     <div>
@@ -711,7 +783,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       </div>
       <div class="step reveal">
         <div class="step-num">2</div>
-        <div><h3>Flexible Payment Options</h3><p>Choose from two convenient payment plan providers — DentiCare and Humm. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
+        <div><h3>Flexible Payment Options</h3><p>Choose from our convenient payment plan providers — DentiCare, Humm, Zip Pay and Medipay. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
@@ -736,7 +808,7 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
       <a class="btn btn-solid" href="/appointments/">Book Your Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="visit-img reveal">
-      <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/welcome-jpg.webp" alt="The entrance courtyard at Dental Specialists Turramurra">
+      <img src="assets/practice-exterior.jpg" alt="The Dental Specialists Turramurra practice on Pacific Highway">
     </div>
   </div>
 </section>

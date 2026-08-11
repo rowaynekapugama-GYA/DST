@@ -17,7 +17,16 @@ Practice photos and the hero banner are hotlinked from the current live site / S
 
 Open `index.html` directly, or enable GitHub Pages (Settings → Pages → deploy from branch) to share a live link.
 
-## Latest round (23 Jul)
+## Latest round (23 Jul — pre-meeting)
+
+- Real practice photography added: new "Inside the Practice" gallery + real reception/exterior in Welcome and Visit
+- Real dentist portraits swapped in for Dr Kamini Titus and Clin. A/Prof Anthony Au (team, arch image, mega menus) — portraits are low-res (319px source); request hi-res versions for production
+- All "Orthodontist" titles now read "Specialist Orthodontist"
+- Two services added: Teeth Whitening, Custom Mouthguards
+- Zip Pay + Medipay added to the payment logo row and text references (styled text badges — swap official brand artwork at build)
+- More playful graphics: floating tooth outlines + twinkling sparkles in hero and orthodontics band
+
+## Earlier round (23 Jul)
 
 - New family hero banner; header, buttons and footer switched to logo blue (orange accent removed)
 - "Orthodontics for Every Age" moved directly after "Why families choose us"
