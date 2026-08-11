@@ -228,32 +228,32 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .svc-tag{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark);background:var(--mist);padding:.3rem .7rem;border-radius:999px;align-self:flex-start}
 
 /* ── Ages band ─────────────────────────────── */
-.ages{background:linear-gradient(160deg,#0F5A5E 0%,#13615E 45%,#1B6B60 100%);color:#EDF6F2}
-.ages .eyebrow{color:#9CC9D6}
-.ages h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:36rem;margin-bottom:1rem;color:#fff}
-.ages p.lede{color:#B9D3DC;max-width:42rem;margin-bottom:2.6rem}
+.ages{background:#E2F0F3;color:var(--ink)}
+.ages .eyebrow{color:var(--teal)}
+.ages h2{font-size:clamp(1.9rem,3.4vw,2.7rem);max-width:36rem;margin-bottom:1rem;color:var(--ink)}
+.ages p.lede{color:var(--ink-soft);max-width:42rem;margin-bottom:2.6rem}
 .ages-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.age-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,background .25s ease,box-shadow .25s ease}
-.age-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.12);box-shadow:0 22px 50px rgba(0,0,0,.3)}
+.age-card{background:#fff;border:1px solid var(--mist-deep);border-radius:22px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+.age-card:hover{transform:translateY(-6px);box-shadow:0 22px 50px rgba(12,59,74,.14)}
 .age-img{position:relative;aspect-ratio:3/2;overflow:hidden}
 .age-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .age-card:hover .age-img img{transform:scale(1.06)}
 .age-label{position:absolute;left:.9rem;bottom:.9rem;background:rgba(20,135,165,.92);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.4rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
 .age-body{padding:1.6rem 1.5rem 1.8rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
-.age-body h3{font-size:1.18rem;color:#fff}
-.age-body p{font-size:.93rem;color:#B9D8E2;flex:1}
-.age-body .link-arrow{color:var(--sand)}
+.age-body h3{font-size:1.18rem;color:var(--ink)}
+.age-body p{font-size:.93rem;color:var(--ink-soft);flex:1}
+.age-body .link-arrow{color:var(--teal)}
 .photo-tag{position:absolute;left:0;right:0;bottom:0;padding:2.4rem .9rem .85rem;background:linear-gradient(transparent,rgba(9,50,64,.9));color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-align:center}
 
 /* Invisalign Platinum strip */
-.invis-strip{margin-top:2.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:22px;padding:1.6rem 1.8rem}
-.invis-medal{width:58px;height:58px;flex:none;border-radius:50%;background:linear-gradient(145deg,#EDF1F3 0%,#B9C4CC 45%,#8FA1AC 100%);display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 1px 2px rgba(255,255,255,.85),0 4px 12px rgba(0,0,0,.3)}
+.invis-strip{margin-top:2.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:1.6rem;align-items:center;background:#fff;border:1px solid var(--mist-deep);border-radius:22px;padding:1.6rem 1.8rem;box-shadow:0 10px 30px rgba(12,59,74,.08)}
+.invis-medal{width:58px;height:58px;flex:none;border-radius:50%;background:linear-gradient(145deg,#EDF1F3 0%,#B9C4CC 45%,#8FA1AC 100%);display:grid;place-items:center;color:var(--ink);box-shadow:inset 0 1px 2px rgba(255,255,255,.85),0 4px 12px rgba(12,59,74,.18)}
 .invis-medal svg{width:30px;height:30px}
-.invis-copy strong{display:block;font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:#fff;margin-bottom:.25rem}
-.invis-copy p{font-size:.92rem;color:#B9D8E2;margin:0}
+.invis-copy strong{display:block;font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--ink);margin-bottom:.25rem}
+.invis-copy p{font-size:.92rem;color:var(--ink-soft);margin:0}
 .ages-cta{margin-top:2.6rem;display:flex;gap:1rem;flex-wrap:wrap}
 .ages-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(2rem,4vw,4rem);align-items:center;margin-bottom:2.6rem}
-.ages-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(0,0,0,.35);max-width:380px;justify-self:end}
+.ages-photo{position:relative;border-radius:24px;overflow:hidden;box-shadow:0 24px 60px rgba(12,59,74,.2);max-width:380px;justify-self:end}
 .ages-photo img{width:100%;height:auto;display:block;transition:transform .5s ease}
 .ages-photo:hover img{transform:scale(1.03)}
 
@@ -306,17 +306,17 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .visit li .check svg{width:13px;height:13px}
 
 /* ── Contact band ──────────────────────────── */
-.contact{background:#0B4E62;color:#EAF3F6}
-.contact .eyebrow{color:#9CC9D6}
+.contact{background:#E2F0F3;color:var(--ink)}
+.contact .eyebrow{color:var(--teal)}
 .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4rem);align-items:start}
-.contact h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:1rem;color:#fff}
-.contact p{color:#B9D3DC;margin-bottom:1.8rem}
+.contact h2{font-size:clamp(1.9rem,3.4vw,2.6rem);margin-bottom:1rem;color:var(--ink)}
+.contact p{color:var(--ink-soft);margin-bottom:1.8rem}
 .contact-list{display:grid;gap:1.1rem;list-style:none;font-size:.98rem}
 .contact-list a{display:flex;gap:.9rem;align-items:center}
-.contact-list a:hover{color:var(--sand)}
-.contact-list .box{width:42px;height:42px;flex:none;border-radius:14px;background:rgba(255,255,255,.09);color:var(--sand);display:grid;place-items:center}
+.contact-list a:hover{color:var(--teal)}
+.contact-list .box{width:42px;height:42px;flex:none;border-radius:14px;background:#fff;color:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px rgba(12,59,74,.08)}
 .contact-list .box svg{width:19px;height:19px}
-.form-card{background:#fff;color:var(--ink);border-radius:26px;padding:2.2rem;box-shadow:0 24px 60px rgba(0,0,0,.3)}
+.form-card{background:#fff;color:var(--ink);border-radius:26px;padding:2.2rem;box-shadow:0 20px 50px rgba(12,59,74,.14)}
 .form-card h3{font-size:1.4rem;margin-bottom:1.4rem}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-grid .full{grid-column:1/-1}
@@ -581,8 +581,8 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
 
 <!-- Orthodontics for every age -->
 <section class="ages">
-  <div class="float-tooth" style="width:80px;height:80px;top:8%;right:4%;--r:10deg;animation:floaty 7s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(127,211,232,.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
-  <div class="deco-sparkle" style="width:28px;height:28px;bottom:12%;left:3%;animation:twinkle 3.2s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.4)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
+  <div class="float-tooth" style="width:80px;height:80px;top:8%;right:4%;--r:10deg;animation:floaty 7s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.22)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+  <div class="deco-sparkle" style="width:28px;height:28px;bottom:12%;left:3%;animation:twinkle 3.2s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(20,135,165,.28)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
   <div class="wrap">
     <div class="ages-intro">
       <div>
@@ -630,12 +630,12 @@ footer{background:var(--teal);color:#DCF0F6;font-size:.92rem;padding:3.5rem 0 2r
         <strong>Invisalign<sup>&reg;</sup> Platinum Provider</strong>
         <p>Platinum status is awarded to practices with significant Invisalign case experience — so you're in genuinely practised hands, whether it's your teen's first aligners or your own.</p>
       </div>
-      <a class="btn btn-white" href="/turramurra/invisalign/">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="/turramurra/invisalign/">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
     </div>
 
     <div class="ages-cta">
       <a class="btn btn-sand" href="/appointments/">Book Your Family's Next Visit <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-white" href="/turramurra/orthodontic-faqs/">Orthodontic FAQs</a>
+      <a class="btn btn-ghost" href="/turramurra/orthodontic-faqs/">Orthodontic FAQs</a>
     </div>
   </div>
 </section>
