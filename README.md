@@ -17,6 +17,13 @@ Practice photos and the hero banner are hotlinked from the current live site / S
 
 Open `index.html` directly, or enable GitHub Pages (Settings → Pages → deploy from branch) to share a live link.
 
+## Colour theme toggle (11 Aug)
+
+- The feature sections (Orthodontics band + Contact) now read from a `--feature-bg` CSS variable
+- Default is the light blue (#E2F0F3); a footer toggle beside the copyright switches them to a warm sand (#EBDDC9)
+- Toggle adds/removes `body.theme-sand`, remembers the choice via localStorage (works when hosted / opened directly; harmless no-op elsewhere)
+- For the build: pick one palette and hard-code it, or keep the toggle as an internal preview and remove before launch
+
 ## Latest round (23 Jul — pre-meeting)
 
 - Real practice photography added: new "Inside the Practice" gallery + real reception/exterior in Welcome and Visit
