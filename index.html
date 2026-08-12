@@ -65,10 +65,9 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .topbar .ic{width:15px;height:15px;color:var(--sand)}
 .topbar .hours{color:#9DBECA}
 header.nav{position:sticky;top:0;z-index:50;background:var(--teal);border-bottom:1px solid rgba(255,255,255,.16);box-shadow:0 6px 24px rgba(12,59,74,.14)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem;overflow:visible}
-.logo{display:flex;align-items:center;position:relative;width:230px;height:70px;flex:none}
-.logo::before{content:"";position:absolute;top:-8px;left:-8px;width:184px;height:172px;background:var(--teal);border-radius:0 0 18px 18px;box-shadow:0 10px 24px rgba(12,59,74,.28);z-index:0}
-.logo img{height:150px;width:auto;position:absolute;top:-8px;left:0;z-index:1}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;padding-bottom:1rem;overflow:visible}
+.logo{display:flex;align-items:center;position:relative;flex:none}
+.logo img{height:104px;width:auto;display:block;filter:drop-shadow(0 6px 14px rgba(12,59,74,.22))}
 .logo .logo-dark{display:none}
 nav ul a{color:#fff}
 nav ul a:hover{color:#fff;border-color:#fff}
@@ -297,8 +296,9 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .funds-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.9rem}
 .funds-head p{color:var(--ink-soft)}
 .funds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
-.fund-chip{display:flex;align-items:center;justify-content:center;height:78px;background:#fff;border:1px solid var(--mist-deep);border-radius:16px;box-shadow:0 8px 22px rgba(12,59,74,.06);font-family:var(--font-display);font-style:italic;font-weight:600;font-size:1.25rem;color:var(--teal);text-align:center;padding:0 1rem;transition:transform .2s ease,box-shadow .2s ease}
+.fund-chip{display:flex;align-items:center;justify-content:center;height:96px;background:#fff;border:1px solid var(--mist-deep);border-radius:16px;box-shadow:0 8px 22px rgba(12,59,74,.06);padding:1rem 1.4rem;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
 .fund-chip:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.fund-chip img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 @media (max-width:760px){.funds-grid{grid-template-columns:1fr 1fr}}
 .step{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.5rem 0;border-bottom:1.5px solid var(--mist-deep)}
 .step:last-child{border-bottom:none}
@@ -828,14 +828,14 @@ body.theme-sand .tt-swatch{background:#E2F0F3}
       <p>We welcome patients with all Australian health funds. Following your appointment, we'll provide you with everything you need to claim your eligible dental rebate directly through your fund, making the process simple and convenient.</p>
     </div>
     <div class="funds-grid reveal">
-      <span class="fund-chip">bupa</span>
-      <span class="fund-chip">HCF</span>
-      <span class="fund-chip">medibank</span>
-      <span class="fund-chip">nib</span>
-      <span class="fund-chip">HBF</span>
-      <span class="fund-chip">Australian&nbsp;Unity</span>
-      <span class="fund-chip">CBHS</span>
-      <span class="fund-chip">Teachers&nbsp;Health</span>
+      <span class="fund-chip"><img src="assets/fund-bupa.png" alt="Bupa"></span>
+      <span class="fund-chip"><img src="assets/fund-hcf.png" alt="HCF"></span>
+      <span class="fund-chip"><img src="assets/fund-medibank.png" alt="Medibank"></span>
+      <span class="fund-chip"><img src="assets/fund-nib.png" alt="nib"></span>
+      <span class="fund-chip"><img src="assets/fund-hbf.png" alt="HBF"></span>
+      <span class="fund-chip"><img src="assets/fund-ausunity.png" alt="Australian Unity"></span>
+      <span class="fund-chip"><img src="assets/fund-cbhs.png" alt="CBHS Health"></span>
+      <span class="fund-chip"><img src="assets/fund-teachers.png" alt="Teachers Health"></span>
     </div>
   </div>
 </section>
