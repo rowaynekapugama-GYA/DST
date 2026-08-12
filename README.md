@@ -17,6 +17,13 @@ Practice photos and the hero banner are hotlinked from the current live site / S
 
 Open `index.html` directly, or enable GitHub Pages (Settings → Pages → deploy from branch) to share a live link.
 
+## Round (12 Aug)
+
+- Afterpay added to the payment options row (official landscape logo)
+- Header logo enlarged ~3x and set to overhang below the header onto the hero image
+- New "We accept all Australian health funds" section added between the payment steps and Visiting Us, with the main funds (Bupa, HCF, Medibank, nib, HBF, Australian Unity, CBHS, Teachers Health)
+  - NOTE: fund logos are styled text wordmarks as placeholders — health fund logos are trademarked; swap official artwork at build (client said "just main health funds logos only")
+
 ## Colour theme toggle (11 Aug)
 
 - The feature sections (Orthodontics band + Contact) now read from a `--feature-bg` CSS variable

@@ -65,9 +65,10 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .topbar .ic{width:15px;height:15px;color:var(--sand)}
 .topbar .hours{color:#9DBECA}
 header.nav{position:sticky;top:0;z-index:50;background:var(--teal);border-bottom:1px solid rgba(255,255,255,.16);box-shadow:0 6px 24px rgba(12,59,74,.14)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem}
-.logo{display:flex;align-items:center}
-.logo img{height:54px;width:auto}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:.7rem;padding-bottom:.7rem;overflow:visible}
+.logo{display:flex;align-items:center;position:relative;width:230px;height:70px;flex:none}
+.logo::before{content:"";position:absolute;top:-8px;left:-8px;width:184px;height:172px;background:var(--teal);border-radius:0 0 18px 18px;box-shadow:0 10px 24px rgba(12,59,74,.28);z-index:0}
+.logo img{height:150px;width:auto;position:absolute;top:-8px;left:0;z-index:1}
 .logo .logo-dark{display:none}
 nav ul a{color:#fff}
 nav ul a:hover{color:#fff;border-color:#fff}
@@ -288,8 +289,17 @@ nav ul a .caret{display:inline-block;margin-left:.3rem;transition:transform .2s;
 .steps h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1rem}
 .steps .lede{color:var(--ink-soft);margin-bottom:1.6rem}
 .pay-logos{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-.pay-logos img,.pay-zip-logo,.pay-medipay-logo{width:150px !important;height:60px !important;object-fit:contain;background:#fff;border-radius:12px;padding:.7rem 1rem !important;box-shadow:0 6px 16px rgba(12,59,74,.07);box-sizing:border-box}
+.pay-logos img,.pay-zip-logo,.pay-medipay-logo,.pay-afterpay-logo{width:150px !important;height:60px !important;object-fit:contain;background:#fff;border-radius:12px;padding:.7rem 1rem !important;box-shadow:0 6px 16px rgba(12,59,74,.07);box-sizing:border-box}
 .pay-chip{width:150px;height:60px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;background:#fff;box-shadow:0 6px 16px rgba(12,59,74,.07);font-weight:800;font-size:1.15rem;letter-spacing:-.02em;box-sizing:border-box}
+
+/* ── Health funds ──────────────────────────── */
+.funds-head{text-align:center;max-width:44rem;margin:0 auto 2.8rem}
+.funds-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.9rem}
+.funds-head p{color:var(--ink-soft)}
+.funds-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
+.fund-chip{display:flex;align-items:center;justify-content:center;height:78px;background:#fff;border:1px solid var(--mist-deep);border-radius:16px;box-shadow:0 8px 22px rgba(12,59,74,.06);font-family:var(--font-display);font-style:italic;font-weight:600;font-size:1.25rem;color:var(--teal);text-align:center;padding:0 1rem;transition:transform .2s ease,box-shadow .2s ease}
+.fund-chip:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+@media (max-width:760px){.funds-grid{grid-template-columns:1fr 1fr}}
 .step{display:grid;grid-template-columns:auto 1fr;gap:1.3rem;padding:1.5rem 0;border-bottom:1.5px solid var(--mist-deep)}
 .step:last-child{border-bottom:none}
 .step-num{font-family:var(--font-display);font-size:1.5rem;width:54px;height:54px;border-radius:50%;background:#fff;color:var(--teal);display:grid;place-items:center;box-shadow:0 6px 16px rgba(12,59,74,.08)}
@@ -484,7 +494,7 @@ body.theme-sand .tt-swatch{background:#E2F0F3}
           <div class="mega mega-sm" role="menu">
             <div class="mega-links">
               <a href="/appointments/"><strong>Appointments</strong><small>How to book your visit</small></a>
-              <a href="/fees-payment/"><strong>Fees &amp; Payment</strong><small>DentiCare, Humm, Zip Pay &amp; Medipay</small></a>
+              <a href="/fees-payment/"><strong>Fees &amp; Payment</strong><small>DentiCare, Humm, Zip, Medipay &amp; Afterpay</small></a>
               <a href="/your-welcome-pack-and-registration/"><strong>Welcome Pack &amp; Registration</strong><small>Everything for your first visit</small></a>
               <a href="/follow-up-care/"><strong>Follow Up Care</strong><small>Looking after your results</small></a>
               <a href="/contact-us/doctor-referrals/"><strong>Doctor Referrals</strong><small>Information for referring clinicians</small></a>
@@ -573,7 +583,7 @@ body.theme-sand .tt-swatch{background:#E2F0F3}
       <div class="diff-card reveal">
         <div class="diff-icon"><svg><use href="#i-card"/></svg></div>
         <h3>Affordable Payment Plans</h3>
-        <p>Flexible payment options through DentiCare, Humm, Zip Pay and Medipay — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
+        <p>Flexible payment options through DentiCare, Humm, Zip Pay, Medipay and Afterpay — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
         <a class="link-arrow" href="/fees-payment/">Fees &amp; payment <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
       </div>
       <div class="diff-card reveal">
@@ -789,6 +799,7 @@ body.theme-sand .tt-swatch{background:#E2F0F3}
         <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/humm-logo-1-300x58.png" alt="Humm payment plans">
         <img src="assets/zip-logo.svg" alt="Zip Pay" class="pay-zip-logo">
         <img src="assets/medipay-logo.png" alt="Medipay" class="pay-medipay-logo">
+        <img src="assets/afterpay-logo.png" alt="Afterpay" class="pay-afterpay-logo">
       </div>
     </div>
     <div>
@@ -798,12 +809,33 @@ body.theme-sand .tt-swatch{background:#E2F0F3}
       </div>
       <div class="step reveal">
         <div class="step-num">2</div>
-        <div><h3>Flexible Payment Options</h3><p>Choose from our convenient payment plan providers — DentiCare, Humm, Zip Pay and Medipay. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
+        <div><h3>Flexible Payment Options</h3><p>Choose from our convenient payment plan providers — DentiCare, Humm, Zip Pay, Medipay and Afterpay. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
       </div>
       <div class="step reveal">
         <div class="step-num">3</div>
         <div><h3>Begin Treatment</h3><p>Pick the plan that suits you best and kickstart your treatment journey. Don't let financial concerns hold you back from improving your health and quality of life.</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Health funds -->
+<section class="funds deco deco-flip">
+  <div class="wrap">
+    <div class="funds-head reveal">
+      <span class="eyebrow" style="justify-content:center">Health Funds</span>
+      <h2>We accept all Australian health funds</h2>
+      <p>We welcome patients with all Australian health funds. Following your appointment, we'll provide you with everything you need to claim your eligible dental rebate directly through your fund, making the process simple and convenient.</p>
+    </div>
+    <div class="funds-grid reveal">
+      <span class="fund-chip">bupa</span>
+      <span class="fund-chip">HCF</span>
+      <span class="fund-chip">medibank</span>
+      <span class="fund-chip">nib</span>
+      <span class="fund-chip">HBF</span>
+      <span class="fund-chip">Australian&nbsp;Unity</span>
+      <span class="fund-chip">CBHS</span>
+      <span class="fund-chip">Teachers&nbsp;Health</span>
     </div>
   </div>
 </section>
