@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dentist Turramurra | Dental Specialists | Turramurra Dental Clinic</title>
-<meta name="description" content="Dental Specialists of Turramurra provides specialist prosthodontist and orthodontist treatments in Turramurra NSW. Call Now!">
+<title>Ceramic Braces | Dental Specialists Turramurra</title>
+<meta name="description" content="Dental Specialists Turramurra offer a range of orthodontic options including 3M Unitek Clarity Advance Ceramic Braces.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@ section{padding:clamp(4rem,8vw,6.5rem) 0}
 .ic svg{width:100%;height:100%}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;gap:.55rem;white-space:nowrap;font-weight:700;font-size:.95rem;padding:.95rem 1.7rem;border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:700;font-size:.95rem;padding:.95rem 1.7rem;border-radius:999px;transition:transform .18s ease, box-shadow .18s ease, background .18s ease}
 .btn svg{transition:transform .18s ease}
 .btn:hover svg{transform:translateX(3px)}
 .btn-solid{background:var(--teal);color:#fff}
@@ -409,6 +409,96 @@ html,body{overflow-x:hidden}
   .reveal-left,.reveal-right{transform:translateY(28px)}
 }
 </style>
+<style>.nav-active{border-bottom-color:#fff !important} .btn{white-space:nowrap}</style>
+
+<style>
+/* ── Page hero (shorter sibling of the homepage hero) ── */
+.page-hero{position:relative;overflow:hidden;padding:clamp(3.5rem,8vw,6rem) 0 clamp(3rem,6vw,4.5rem);color:#fff;
+  background:linear-gradient(100deg,rgba(9,42,54,.90) 0%,rgba(12,59,74,.78) 45%,rgba(12,59,74,.42) 100%),
+  var(--page-hero-img) center/cover no-repeat}
+.page-hero .eyebrow{color:#BFE0EA}
+.page-hero .eyebrow::before{background:var(--sand)}
+.page-hero h1{font-size:clamp(2.1rem,4.4vw,3.3rem);max-width:24ch;margin-bottom:1rem}
+.page-hero h1 em{font-style:italic;position:relative;white-space:nowrap}
+.page-hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.14em;background:var(--sand);z-index:-1;border-radius:4px;opacity:.75}
+.page-hero p.lede{font-size:1.06rem;color:#DCEBF0;max-width:44rem;margin-bottom:1.6rem}
+.crumb{display:flex;gap:.5rem;align-items:center;font-size:.85rem;font-weight:600;color:#BFE0EA;margin-bottom:1.2rem;flex-wrap:wrap}
+.crumb a{color:#fff}.crumb a:hover{color:var(--sand)}
+.crumb span{opacity:.6}
+
+/* ── Prose + shared inner-page bits ── */
+.prose p{color:var(--ink-soft);margin-bottom:1.1rem}
+.prose h3{font-size:1.3rem;margin:1.6rem 0 .6rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+.split-img{border-radius:24px;overflow:hidden;box-shadow:var(--shadow)}
+.split-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.split-img:hover img{transform:scale(1.04)}
+.sec-head{max-width:44rem;margin-bottom:2.6rem}
+.sec-head.center{text-align:center;margin-left:auto;margin-right:auto}
+.sec-head.center .eyebrow{justify-content:center}
+.sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:.9rem}
+.sec-head p{color:var(--ink-soft)}
+.tick-list{list-style:none;display:grid;gap:.85rem;margin:1.2rem 0 1.8rem}
+.tick-list li{display:flex;gap:.8rem;align-items:flex-start;font-size:.97rem;color:var(--ink-soft)}
+.tick-list li .check{flex:none;width:26px;height:26px;border-radius:50%;background:var(--mist);color:var(--teal);display:grid;place-items:center;margin-top:.1rem}
+.tick-list li .check svg{width:13px;height:13px}
+.gal3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:3rem}
+.gal3 figure{margin:0;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(12,59,74,.12);aspect-ratio:3/2}
+.gal3 img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gal3 figure:hover img{transform:scale(1.06)}
+.bio-card{display:grid;grid-template-columns:300px 1fr;gap:clamp(1.8rem,4vw,3rem);align-items:start;background:#fff;border:1px solid var(--mist-deep);border-radius:26px;padding:clamp(1.6rem,3vw,2.4rem);box-shadow:0 12px 34px rgba(12,59,74,.07)}
+.bio-photo{border-radius:20px;overflow:hidden;aspect-ratio:3/4;background:var(--mist)}
+.bio-photo img{width:100%;height:100%;object-fit:cover}
+.bio-card h3{font-size:1.5rem;margin-bottom:.2rem}
+.bio-role{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:1rem;display:block}
+.bio-card p{color:var(--ink-soft);font-size:.96rem;margin-bottom:.9rem}
+.bio-card h4{font-family:var(--font-body);font-size:.95rem;font-weight:700;margin:1.2rem 0 .6rem}
+.bio-card ul{list-style:none;display:grid;gap:.45rem;font-size:.92rem;color:var(--ink-soft)}
+.bio-card ul li{padding-left:1.1rem;position:relative}
+.bio-card ul li::before{content:"";position:absolute;left:0;top:.55em;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.team-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.mini-card{text-align:center}
+.mini-photo{border-radius:18px;overflow:hidden;aspect-ratio:3/4;background:var(--mist);margin-bottom:.9rem;box-shadow:0 10px 26px rgba(12,59,74,.09)}
+.mini-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.mini-card:hover .mini-photo img{transform:scale(1.05)}
+.mini-card h3{font-size:1.05rem}
+.mini-card small{color:var(--teal);font-weight:700;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.res-card{display:flex;align-items:center;gap:.9rem;background:#fff;border:1.5px solid var(--mist-deep);border-radius:18px;padding:1.2rem 1.3rem;font-weight:600;transition:border-color .2s,transform .2s,box-shadow .2s}
+.res-card:hover{border-color:var(--teal);transform:translateY(-3px);box-shadow:var(--shadow)}
+.res-card .ic{width:20px;height:20px;color:var(--teal);flex:none}
+.cta-band{background:var(--teal);color:#fff;text-align:center}
+.cta-band h2{font-size:clamp(1.9rem,3.4vw,2.6rem);color:#fff;margin-bottom:1rem}
+.cta-band p{color:#DCF0F6;max-width:44rem;margin:0 auto 2rem}
+.cta-band .btn-white{background:#fff;color:var(--teal)}
+.cta-band .btn-white:hover{background:var(--ink);color:#fff}
+.cta-band .btn-outline{border:2px solid rgba(255,255,255,.7);color:#fff}
+.cta-band .btn-outline:hover{background:#fff;color:var(--teal)}
+.cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.info-card{background:#fff;border:1px solid var(--mist-deep);border-radius:18px;padding:1.5rem}
+.info-card h3{font-size:.8rem;font-family:var(--font-body);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:.5rem;font-style:normal}
+.info-card p{font-size:.95rem;color:var(--ink-soft);margin:0}
+@media (max-width:960px){
+  .split,.bio-card{grid-template-columns:1fr}
+  .gal3,.team-mini,.res-grid,.info-grid{grid-template-columns:1fr 1fr}
+  .bio-photo{max-width:280px}
+}
+@media (max-width:600px){
+  .gal3,.team-mini,.res-grid,.info-grid{grid-template-columns:1fr}
+}
+</style>
+
+
+<style>
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem}
+.case-card{background:#fff;border:1px solid var(--mist-deep);border-radius:20px;overflow:hidden;box-shadow:0 10px 26px rgba(12,59,74,.07)}
+.case-img{background:var(--mist)}
+.case-img img{width:100%;height:auto;display:block}
+.case-card p{font-size:.93rem;color:var(--ink-soft);margin:0;padding:1.2rem 1.3rem}
+@media (max-width:760px){.case-grid{grid-template-columns:1fr}}
+</style>
+
 </head>
 <body>
 
@@ -434,6 +524,7 @@ html,body{overflow-x:hidden}
   </defs>
 </svg>
 
+
 <!-- Top bar -->
 <div class="topbar">
   <div class="wrap">
@@ -445,10 +536,11 @@ html,body{overflow-x:hidden}
   </div>
 </div>
 
+
 <!-- Nav -->
 <header class="nav">
   <div class="wrap">
-    <a href="index.html" class="logo"><img class="logo-light" src="assets/logo-white.png" alt="Dental Specialists Turramurra — Orthodontics &amp; Prosthodontics"><img class="logo-dark" src="assets/logo.png" alt=""></a>
+    <a href="/" class="logo"><img class="logo-light" src="assets/logo-white.png" alt="Dental Specialists Turramurra — Orthodontics &amp; Prosthodontics"><img class="logo-dark" src="assets/logo.png" alt=""></a>
     <nav aria-label="Main">
       <ul>
         <li class="has-mega">
@@ -462,17 +554,17 @@ html,body{overflow-x:hidden}
           </div>
         </li>
         <li class="has-mega">
-          <a href="orthodontics.html">Orthodontics<span class="caret">▾</span></a>
+          <a href="orthodontics.html" class="nav-active" aria-current="page">Orthodontics<span class="caret">▾</span></a>
           <div class="mega" role="menu">
             <a class="mega-img" href="orthodontics.html">
               <img src="assets/dr-kamini-titus.jpg" alt="">
               <span>Orthodontics with Dr Kamini Titus</span>
             </a>
             <div class="mega-links">
-              <a href="orthodontics-children.html"><strong>Orthodontics for Children</strong><small>Early assessment &amp; a fun first visit</small></a>
+              <a href="orthodontics.html#services"><strong>Orthodontics for Children</strong><small>Early assessment &amp; a fun first visit</small></a>
               <a href="orthodontics.html#services"><strong>Orthodontics for Teens</strong><small>Braces and clear aligners for teens</small></a>
-              <a href="orthodontics-adults.html"><strong>Orthodontics for Adults</strong><small>Discreet modern straightening options</small></a>
-              <a href="two-phase-treatment.html"><strong>Two-Phase Treatment</strong><small>Staged care for growing kids</small></a>
+              <a href="orthodontics.html#services"><strong>Orthodontics for Adults</strong><small>Discreet modern straightening options</small></a>
+              <a href="orthodontics.html#services"><strong>Two-Phase Treatment</strong><small>Staged care for growing kids</small></a>
               <a href="invisalign.html"><strong>Invisalign</strong><small>Nearly invisible clear aligners</small></a>
               <a href="clarity-ceramic-braces.html"><strong>Clarity Ceramic Braces</strong><small>Subtle, tooth-coloured braces</small></a>
               <a href="orthodontics.html#services"><strong>Orthodontic FAQs</strong><small>Your questions, answered</small></a>
@@ -487,11 +579,11 @@ html,body{overflow-x:hidden}
               <span>Prosthodontics with Clin. A/Prof Anthony Au</span>
             </a>
             <div class="mega-links">
-              <a href="comprehensive-assessment.html"><strong>Comprehensive Assessment</strong><small>A global view of your oral health</small></a>
-              <a href="cosmetic-dental-care.html"><strong>Cosmetic Dental Care</strong><small>Smile design built around you</small></a>
-              <a href="anti-ageing-restorative.html"><strong>Anti-ageing Restorative Care</strong><small>Complex restorative treatment</small></a>
-              <a href="tmd-treatment.html"><strong>Headaches &amp; Jaw Problems (TMD)</strong><small>Relief and long-term stability</small></a>
-              <a href="sleep-apnoea.html"><strong>Sleep Apnoea &amp; Sleep Disorders</strong><small>Diagnosis and complete solutions</small></a>
+              <a href="prosthodontics.html#services"><strong>Comprehensive Assessment</strong><small>A global view of your oral health</small></a>
+              <a href="prosthodontics.html#services"><strong>Cosmetic Dental Care</strong><small>Smile design built around you</small></a>
+              <a href="prosthodontics.html#services"><strong>Anti-ageing Restorative Care</strong><small>Complex restorative treatment</small></a>
+              <a href="prosthodontics.html#services"><strong>Headaches &amp; Jaw Problems (TMD)</strong><small>Relief and long-term stability</small></a>
+              <a href="prosthodontics.html#services"><strong>Sleep Apnoea &amp; Sleep Disorders</strong><small>Diagnosis and complete solutions</small></a>
               <a href="ems-airflow.html"><strong>EMS Airflow Biofilm Therapy</strong><small>A gentler professional clean</small></a>
             </div>
           </div>
@@ -519,350 +611,57 @@ html,body{overflow-x:hidden}
   </div>
 </header>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="float-tooth" style="width:70px;height:70px;top:22%;left:6%;--r:-12deg;animation:floaty 6s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
-  <div class="deco-sparkle" style="width:30px;height:30px;top:30%;left:2%;animation:twinkle 3s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.5)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
-  <div class="deco-sparkle" style="width:22px;height:22px;bottom:26%;left:9%;animation:twinkle 2.4s ease-in-out infinite .5s" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(255,255,255,.35)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
-  <a class="invis-badge" href="orthodontics.html#services" aria-label="Invisalign Platinum Provider — learn about Invisalign at DST">
-    <span class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
-    <span><small>Platinum Provider</small><strong>Invisalign<sup>®</sup></strong></span>
-  </a>
+
+<!-- Page hero -->
+<section class="page-hero" style="--page-hero-img:url('https://dentalspecialists.com.au/wp-content/uploads/2023/11/clarity-ceramic-braces-img-2-new-jpg.webp')">
   <div class="wrap">
-    <div class="hero-inner">
-      <span class="eyebrow">Specialist Orthodontics &amp; Prosthodontics · North Shore</span>
-      <h1>Healthy, beautiful smiles for <em>the whole family</em></h1>
-      <p>From your child's first orthodontic visit to specialist prosthodontic and restorative care, Dental Specialists Turramurra takes a warm, holistic approach to every smile that walks through our door.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-sand" href="patient-info.html#resources">Book an Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-white" href="about-us.html">Meet Our Team</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item"><strong data-count="25" data-suffix="+">25+</strong><small>Years of Experience</small></div>
-        <div class="trust-item"><strong data-count="10000" data-suffix="+">10,000+</strong><small>Procedures Completed</small></div>
-        <div class="trust-item"><strong>2 Specialties</strong><small>Orthodontics &amp; Prosthodontics</small></div>
-      </div>
+    <nav class="crumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="orthodontics.html">Orthodontics</a><span>/</span>Clarity Ceramic Braces
+    </nav>
+    <span class="eyebrow">Clarity Ceramic Braces</span>
+    <h1>Clarity <em>Ceramic Braces</em></h1>
+    <p class="lede">We are proud to provide 3M Unitek Clarity Advance Ceramic Braces</p>
+    <div class="hero-ctas">
+      <a class="btn btn-sand" href="index.html#contact">Book an Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-white" href="tel:0294887455">Call (02) 9488 7455</a>
     </div>
   </div>
 </section>
 
-<!-- Transparent name callout (scrolling) -->
-<div class="watermark" aria-hidden="true">
-  <div class="track">
-    <span>dental specialists turramurra</span><i class="dot"></i>
-    <span>orthodontics &amp; prosthodontics</span><i class="dot"></i>
-    <span>dental specialists turramurra</span><i class="dot"></i>
-    <span>orthodontics &amp; prosthodontics</span><i class="dot"></i>
-  </div>
-</div>
 
-<!-- Welcome -->
-<section class="welcome deco deco-flip">
-  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
-  <div class="wrap">
-    <div class="welcome-img reveal">
-      <img src="assets/practice-reception.jpg" alt="The marble reception at Dental Specialists Turramurra">
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Reputed Specialist Clinic</span>
-      <h2>Welcome to Dental Specialists Turramurra</h2>
-      <p>Dental Specialists Turramurra are regarded as one of the leading providers of exceptional high-quality dental care on Sydney's North Shore.</p>
-      <p>The difference we offer at DST is a comprehensive, holistic approach. While most dental specialists focus on specific clinical problems, we take a more global view to your restorative, implant, orthodontic and aesthetic dental care. By doing this, we also improve your general well-being.</p>
-      <a class="link-arrow" href="about-us.html">Read more about us <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Difference cards -->
-<section class="diff">
-  <div class="wrap">
-    <div class="diff-head reveal">
-      <span class="eyebrow" style="justify-content:center">The DST Difference</span>
-      <h2>Why families across the North Shore choose us</h2>
-    </div>
-    <div class="diff-grid">
-      <div class="diff-card reveal">
-        <div class="diff-icon"><svg><use href="#i-family"/></svg></div>
-        <h3>Care for Every Age</h3>
-        <p>Orthodontic care for children, teens and adults, alongside specialist prosthodontic treatment — the whole family, looked after under one roof.</p>
-        <a class="link-arrow" href="orthodontics.html">Orthodontics <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
-      </div>
-      <div class="diff-card reveal">
-        <div class="diff-icon"><svg><use href="#i-card"/></svg></div>
-        <h3>Affordable Payment Plans</h3>
-        <p>Flexible payment options through DentiCare, Humm, Zip Pay, Medipay and Afterpay — with zero-interest plans up to $30,000 and repayments over 6 to 60 months.</p>
-        <a class="link-arrow" href="patient-info.html#resources">Fees &amp; payment <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
-      </div>
-      <div class="diff-card reveal">
-        <div class="diff-icon"><svg><use href="#i-award"/></svg></div>
-        <h3>Specialist Expertise</h3>
-        <p>A holistic, comprehensive approach from an experienced Specialist Orthodontist and Prosthodontist — one global view of your family's oral health.</p>
-        <a class="link-arrow" href="about-us.html">About our approach <span class="ic"><svg><use href="#i-arrow"/></svg></span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Orthodontics for every age -->
-<section class="ages">
-  <div class="float-tooth" style="width:80px;height:80px;top:8%;right:4%;--r:10deg;animation:floaty 7s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.22)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
-  <div class="deco-sparkle" style="width:28px;height:28px;bottom:12%;left:3%;animation:twinkle 3.2s ease-in-out infinite" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(20,135,165,.28)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
-  <div class="wrap">
-    <div class="ages-intro">
-      <div>
-        <span class="eyebrow">Orthodontics for Every Age</span>
-        <h2>Straighter smiles for kids, teens and parents alike</h2>
-        <p class="lede">Whether it's your child's first orthodontic assessment or the treatment you've been putting off for yourself, our Specialist Orthodontist Dr Kamini Titus tailors every plan to the person in the chair.</p>
-      </div>
-      <div class="ages-photo reveal">
-        <img src="assets/dr-kamini-titus-full.jpg" alt="Dr Kamini Titus, Specialist Orthodontist at Dental Specialists Turramurra">
-        <span class="photo-tag">Dr Kamini Titus · Specialist Orthodontist</span>
-      </div>
-    </div>
-
-    <div class="ages-grid">
-      <a class="age-card reveal" href="orthodontics.html#services">
-        <div class="age-img"><img src="assets/ortho-kids.jpg" alt="A young girl with braces smiling outdoors"><span class="age-label">Kids Orthodontics</span></div>
-        <div class="age-body">
-          <h3>Orthodontics for Kids</h3>
-          <p>Early assessment from around age 7 — guiding jaw growth while it's easy, and making that first visit a fun one.</p>
-          <span class="link-arrow">Kids overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-        </div>
-      </a>
-      <a class="age-card reveal" href="orthodontics.html#services">
-        <div class="age-img"><img src="assets/ortho-teens.jpg" alt="A teenage boy smiling with braces"><span class="age-label">Teen Orthodontics</span></div>
-        <div class="age-body">
-          <h3>Orthodontics for Teens</h3>
-          <p>The classic age for treatment — from traditional and ceramic braces through to Invisalign clear aligners.</p>
-          <span class="link-arrow">Teens overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-        </div>
-      </a>
-      <a class="age-card reveal" href="orthodontics.html#services">
-        <div class="age-img"><img src="assets/ortho-adults.jpg" alt="A woman placing a clear aligner"><span class="age-label">Adult Orthodontics</span></div>
-        <div class="age-body">
-          <h3>Orthodontics for Adults</h3>
-          <p>It's never too late for a straighter smile, with discreet modern options that fit around work and family life.</p>
-          <span class="link-arrow">Adults overview <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-        </div>
-      </a>
-    </div>
-
-    <!-- Invisalign Platinum Provider callout -->
-    <div class="invis-strip reveal">
-      <span class="invis-medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg></span>
-      <div class="invis-copy">
-        <strong>Invisalign<sup>&reg;</sup> Platinum Provider</strong>
-        <p>Platinum status is awarded to practices with significant Invisalign case experience — so you're in genuinely practised hands, whether it's your teen's first aligners or your own.</p>
-      </div>
-      <a class="btn btn-ghost" href="orthodontics.html#services">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-    </div>
-
-    <div class="ages-cta">
-      <a class="btn btn-sand" href="patient-info.html#resources">Book Your Family's Next Visit <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-      <a class="btn btn-ghost" href="orthodontics.html#services">Orthodontic FAQs</a>
-    </div>
-  </div>
-</section>
-
-<!-- Specialist services -->
 <section class="deco">
   <div class="deco-tooth tl" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.14)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
   <div class="wrap">
-    <div class="services-head reveal">
-      <div>
-        <span class="eyebrow">Specialist Services</span>
-        <h2>Orthodontic &amp; Prosthodontic care, tailored to you</h2>
-      </div>
-      <a class="btn btn-ghost" href="prosthodontics.html">View All Services</a>
-    </div>
-    <div class="svc-grid">
-      <a class="svc-card reveal" href="orthodontics.html#services">
-        <span class="svc-tag">Orthodontics</span>
-        <h3>Orthodontic Options</h3>
-        <p>A range of orthodontic treatments — including Invisalign and Clarity ceramic braces — to help give you a straighter smile.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="prosthodontics.html#services">
-        <span class="svc-tag">Prosthodontics</span>
-        <h3>Cosmetic Dental Care</h3>
-        <p>We are dedicated to our patients and always take the time to listen to your concerns and aspirations.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="prosthodontics.html#services">
-        <span class="svc-tag">Prosthodontics</span>
-        <h3>Anti-ageing Restorative Care</h3>
-        <p>Ageing is a natural process — our complex restorative care helps protect and rejuvenate your smile at every stage of life.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="prosthodontics.html#services">
-        <span class="svc-tag">TMD</span>
-        <h3>Headaches &amp; Jaw Problems</h3>
-        <p>Immediate relief for your symptoms and long-term stability to minimise recurrence.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="prosthodontics.html#services">
-        <span class="svc-tag">Sleep</span>
-        <h3>Sleep Apnoea &amp; Sleep Disorders</h3>
-        <p>We spend time with you and other specialists to determine the correct diagnosis, then provide a complete solution.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="orthodontics.html#services">
-        <span class="svc-tag">Hygiene</span>
-        <h3>EMS Airflow Biofilm Therapy</h3>
-        <p>Gentle, modern guided biofilm therapy for a deeper, more comfortable professional clean.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="general-services.html#services">
-        <span class="svc-tag">Cosmetic</span>
-        <h3>Teeth Whitening</h3>
-        <p>Professional whitening for a brighter, more confident smile — safely supervised and tailored to you.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
-      <a class="svc-card reveal" href="general-services.html#services">
-        <span class="svc-tag">Protection</span>
-        <h3>Custom Mouthguards</h3>
-        <p>Custom-fitted mouthguards that protect teeth during sport far better than any off-the-shelf option.</p>
-        <span class="link-arrow">Learn more <span class="ic"><svg><use href="#i-arrow"/></svg></span></span>
-      </a>
+    <div class="gal3 reveal"><figure><img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/clarity-ceramic-braces-img-2-new-jpg.webp" alt="Clarity ceramic braces"></figure><figure><img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/clarity-ceramic-braces-img-4-new-jpg.webp" alt="Ceramic braces treatment"></figure><figure><img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/clarity-ceramic-braces-img-1-new-jpg.webp" alt="Nearly invisible ceramic brackets"></figure></div>
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Ceramic Braces</span>
+      <h2>A perfect combination of strength and beauty and the aesthetic alternative to traditional metal braces.</h2>
+      <p>With Clarity Advanced&trade; ceramic brackets, you'll have a lot to smile about, even before your braces are removed! By incorporating the strength and function of traditional braces with the aesthetics of translucent ceramic, Clarity Advanced&trade; brackets can give you incredible orthodontic results with brackets that are nearly invisible. They move teeth with the same efficiency as traditional braces.</p>
+      <p style="margin-top:1rem">There is also 3M Unitek Victory Low Profile metal braces &ndash; small, comfortable mini braces in metal.</p>
     </div>
   </div>
 </section>
 
-<!-- Team -->
-<section class="deco deco-flip">
-  <div class="deco-tooth br" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="rgba(20,135,165,.12)" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.5 4 8.8 3 7 3 4.2 3 2.5 5.2 2.5 8c0 4.5 2 6 3 13 .1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 .4-2.5 1.6-6 4.1-6s3.7 3.5 4.1 6c.1.6.6 1 1.2 1 .6 0 1.1-.4 1.2-1 1-7 3-8.5 3-13 0-2.8-1.7-5-4.5-5-1.8 0-3.5 1-5 2.5Z"/></svg></div>
+<section class="ages">
+  <div class="wrap split">
+    <div class="split-img reveal"><img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/Clarity-Ceramic-Braces-img-01.jpg" alt="Victory traditional metal brackets"></div>
+    <div class="reveal prose">
+      <span class="eyebrow">Metal Brackets</span>
+      <h2 style="font-size:clamp(1.9rem,3.4vw,2.7rem);margin-bottom:1.1rem">Victory&trade; Traditional Metal Brackets</h2>
+      <p>If you want &ldquo;colours&rdquo; as part of your braces experience. We continue to offer Victory&trade; metal brackets that accentuate the colours.</p>
+      <a class="btn btn-solid" href="index.html#contact">Contact Us <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA band -->
+<section class="cta-band">
   <div class="wrap">
-    <div class="team-head reveal">
-      <span class="eyebrow" style="justify-content:center">Our Team</span>
-      <h2>Specialists you'll actually get to know</h2>
-      <p>Please take the time to meet the team at our clinic. We will ensure your dental experience is enjoyable and your results exemplary.</p>
-    </div>
-    <div class="team-grid">
-      <div class="team-card reveal">
-        <div class="team-photo"><img src="assets/team-kamini.jpg" alt="Dr Kamini Titus, Specialist Orthodontist"></div>
-        <h3>Dr Kamini Titus</h3>
-        <small>Specialist Orthodontist</small>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-photo"><img src="assets/team-anthony.jpg" alt="Clinical Associate Professor Anthony Au, Prosthodontist"></div>
-        <h3>Clin. A/Prof Anthony Au</h3>
-        <small>Prosthodontist</small>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:2.6rem"><a class="btn btn-ghost" href="about-us.html#team">Meet the Whole Team</a></div>
-  </div>
-</section>
-
-
-<!-- Practice gallery -->
-<section class="gallery deco">
-  <div class="deco-sparkle s1" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(20,135,165,.16)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
-  <div class="deco-sparkle s2" aria-hidden="true"><svg viewBox="0 0 24 24" fill="rgba(127,211,232,.4)"><path d="M12 0c.6 5.5 3.9 8.8 9.4 9.4-5.5.6-8.8 3.9-9.4 9.4-.6-5.5-3.9-8.8-9.4-9.4C8.1 8.8 11.4 5.5 12 0Z"/></svg></div>
-  <div class="wrap">
-    <div class="gallery-head reveal">
-      <span class="eyebrow" style="justify-content:center">Inside the Practice</span>
-      <h2>A calm, welcoming space on Pacific Highway</h2>
-      <p>From our light-filled surgeries to a comfortable waiting lounge, we've created a relaxed environment the whole family can feel at ease in.</p>
-    </div>
-    <div class="gallery-grid">
-      <figure class="g-item g-1 reveal"><img src="assets/practice-reception.jpg" alt="Marble reception desk at Dental Specialists Turramurra"><figcaption>Reception</figcaption></figure>
-      <figure class="g-item g-2 reveal"><img src="assets/practice-surgery.jpg" alt="A modern treatment surgery"><figcaption>Treatment surgery</figcaption></figure>
-      <figure class="g-item g-3 reveal"><img src="assets/practice-kids-room.jpg" alt="Child-friendly treatment room"><figcaption>Kids' room</figcaption></figure>
-      <figure class="g-item g-4 reveal"><img src="assets/practice-red-nook.jpg" alt="Reception seating with feature red wall"><figcaption>Reception lounge</figcaption></figure>
-      <figure class="g-item g-5 reveal"><img src="assets/practice-waiting.jpg" alt="Comfortable waiting lounge"><figcaption>Waiting lounge</figcaption></figure>
-      <figure class="g-item g-6 reveal"><img src="assets/practice-entrance.jpg" alt="The welcoming entrance courtyard"><figcaption>Entrance</figcaption></figure>
-      <figure class="g-item g-7 reveal"><img src="assets/practice-exterior.jpg" alt="The practice exterior on Pacific Highway"><figcaption>Our Turramurra practice</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- Aligner break strip -->
-<section class="break-strip">
-  <div class="wrap break-inner">
-    <div class="break-img reveal">
-      <img src="assets/adult-clear-aligner.jpg" alt="A woman smiling while holding her clear aligner">
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Clear Aligners</span>
-      <h2>Straighten your smile — without anyone noticing</h2>
-      <p>Nearly invisible options like Invisalign and Clarity ceramic braces mean treatment can fit quietly around busy work and family life. Most people won't even know you're wearing them.</p>
-      <div class="break-ctas">
-        <a class="btn btn-solid" href="orthodontics.html#services">Explore Invisalign <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn-ghost" href="orthodontics.html#services">All Orthodontic Options</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Steps to affordable treatment -->
-<section class="steps">
-  <div class="wrap steps-inner">
-    <div class="reveal">
-      <span class="eyebrow">Fees &amp; Payment</span>
-      <h2>Simple steps to affordable treatment</h2>
-      <p class="lede">We understand the importance of maintaining optimal oral health, and we are dedicated to making top-notch specialist treatment affordable for you and your family.</p>
-      <div class="pay-logos">
-        <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/denticare-logo-300x58.jpg" alt="DentiCare payment plans">
-        <img src="https://dentalspecialists.com.au/wp-content/uploads/2023/11/humm-logo-1-300x58.png" alt="Humm payment plans">
-        <img src="assets/zip-logo.svg" alt="Zip Pay" class="pay-zip-logo">
-        <img src="assets/medipay-logo.png" alt="Medipay" class="pay-medipay-logo">
-        <img src="assets/afterpay-logo.png" alt="Afterpay" class="pay-afterpay-logo">
-      </div>
-    </div>
-    <div>
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <div><h3>Consultation</h3><p>Your journey begins with a consultation where we assess your unique needs, discuss your recommended treatment plan, and give you clear insight into expected fees.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <div><h3>Flexible Payment Options</h3><p>Choose from our convenient payment plan providers — DentiCare, Humm, Zip Pay, Medipay and Afterpay. Humm offers zero interest up to $30,000, with pre-approval up to $5,000 online and flexible repayments over 6, 12, 24 or even 60 months.</p></div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <div><h3>Begin Treatment</h3><p>Pick the plan that suits you best and kickstart your treatment journey. Don't let financial concerns hold you back from improving your health and quality of life.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Health funds -->
-<section class="funds deco deco-flip">
-  <div class="wrap">
-    <div class="funds-head reveal">
-      <span class="eyebrow" style="justify-content:center">Health Funds</span>
-      <h2>We accept all Australian health funds</h2>
-      <p>We welcome patients with all Australian health funds. Following your appointment, we'll provide you with everything you need to claim your eligible dental rebate directly through your fund, making the process simple and convenient.</p>
-    </div>
-    <div class="funds-grid reveal">
-      <span class="fund-chip"><img src="assets/fund-bupa.png" alt="Bupa"></span>
-      <span class="fund-chip"><img src="assets/fund-hcf.png" alt="HCF"></span>
-      <span class="fund-chip"><img src="assets/fund-medibank.png" alt="Medibank"></span>
-      <span class="fund-chip"><img src="assets/fund-nib.png" alt="nib"></span>
-      <span class="fund-chip"><img src="assets/fund-hbf.png" alt="HBF"></span>
-      <span class="fund-chip"><img src="assets/fund-ausunity.png" alt="Australian Unity"></span>
-      <span class="fund-chip"><img src="assets/fund-cbhs.png" alt="CBHS Health"></span>
-      <span class="fund-chip"><img src="assets/fund-teachers.png" alt="Teachers Health"></span>
-    </div>
-  </div>
-</section>
-
-<!-- Visit us -->
-<section class="visit deco">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">Visiting Us</span>
-      <h2>Scheduling your appointment is simple</h2>
-      <p>Call us on <strong>(02) 9488 7455</strong> during office hours. Outside office hours, leave a message and we'll get back to you promptly. If you have a dental emergency, contact us and we'll do our utmost to accommodate you.</p>
-      <ul>
-        <li><span class="check"><svg><use href="#i-check"/></svg></span>Suite 2, 1335 Pacific Highway, Turramurra — corner of Pacific Highway and Ray Street, next door to Chemist Warehouse</li>
-        <li><span class="check"><svg><use href="#i-check"/></svg></span>A short 2–3 minute walk from Turramurra station via Forbes Lane and Ray Street</li>
-        <li><span class="check"><svg><use href="#i-check"/></svg></span>Ample parking available on Ray Street and in the vicinity</li>
-      </ul>
-      <a class="btn btn-solid" href="patient-info.html#resources">Book Your Appointment <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
-    </div>
-    <div class="visit-img reveal">
-      <img src="assets/practice-exterior.jpg" alt="The Dental Specialists Turramurra practice on Pacific Highway">
+    <h2>Schedule an Appointment Today</h2>
+    <p>At Dental Specialists Turramurra, we provide a wide range of specialist dental treatments and services. Contact us for more information or to book an appointment.</p>
+    <div class="cta-actions">
+      <a class="btn btn-white" href="index.html#contact">Contact Us <svg width="16" height="16"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-outline" href="about-us.html#team">Meet Our Team</a>
     </div>
   </div>
 </section>
@@ -896,6 +695,7 @@ html,body{overflow-x:hidden}
   </div>
 </section>
 
+
 <!-- Full-width map -->
 <section class="map-band">
   <iframe
@@ -909,12 +709,13 @@ html,body{overflow-x:hidden}
   </div>
 </section>
 
+
 <!-- Footer -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <a href="index.html" class="logo"><img src="assets/logo-white.png" alt="Dental Specialists Turramurra" class="foot-logo"></a>
+        <a href="/" class="logo"><img src="assets/logo-white.png" alt="Dental Specialists Turramurra" class="foot-logo"></a>
         <p>Dental Specialists Turramurra are regarded as one of the leading providers of exceptional high-quality specialist dental care on Sydney's North Shore.</p>
         <div class="foot-social">
           <a href="https://www.facebook.com/DentalSpecialistsTurramurra/" aria-label="Facebook" target="_blank" rel="noopener"><svg><use href="#i-facebook"/></svg></a>
@@ -925,7 +726,7 @@ html,body{overflow-x:hidden}
       <div>
         <h4>Quick Links</h4>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="about-us.html">About Us</a></li>
           <li><a href="orthodontics.html">Orthodontics</a></li>
           <li><a href="prosthodontics.html">Prosthodontics</a></li>
@@ -938,19 +739,19 @@ html,body{overflow-x:hidden}
           <li><a href="invisalign.html">Invisalign</a></li>
           <li><a href="clarity-ceramic-braces.html">Clarity Ceramic Braces</a></li>
           <li><a href="orthodontics.html#services">Two-Phase Treatment</a></li>
-          <li><a href="orthodontics-children.html">Orthodontics for Children</a></li>
+          <li><a href="orthodontics.html#services">Orthodontics for Children</a></li>
           <li><a href="orthodontics.html#services">Orthodontics for Teens</a></li>
-          <li><a href="orthodontics-adults.html">Orthodontics for Adults</a></li>
+          <li><a href="orthodontics.html#services">Orthodontics for Adults</a></li>
         </ul>
       </div>
       <div>
         <h4>Prosthodontics</h4>
         <ul>
-          <li><a href="comprehensive-assessment.html">Comprehensive Assessment</a></li>
-          <li><a href="cosmetic-dental-care.html">Cosmetic Dental Care</a></li>
-          <li><a href="anti-ageing-restorative.html">Anti-ageing Restorative Care</a></li>
-          <li><a href="tmd-treatment.html">Headaches &amp; Jaw Problems</a></li>
-          <li><a href="sleep-apnoea.html">Sleep Apnoea &amp; Sleep Disorders</a></li>
+          <li><a href="prosthodontics.html#services">Comprehensive Assessment</a></li>
+          <li><a href="prosthodontics.html#services">Cosmetic Dental Care</a></li>
+          <li><a href="prosthodontics.html#services">Anti-ageing Restorative Care</a></li>
+          <li><a href="prosthodontics.html#services">Headaches &amp; Jaw Problems</a></li>
+          <li><a href="prosthodontics.html#services">Sleep Apnoea &amp; Sleep Disorders</a></li>
         </ul>
       </div>
     </div>
@@ -964,6 +765,7 @@ html,body{overflow-x:hidden}
     </div>
   </div>
 </footer>
+
 
 <script>
 // Scroll reveal with per-card stagger (skipped when reduced motion preferred)
@@ -1048,3 +850,4 @@ if(!rm && hero){
 </script>
 </body>
 </html>
+

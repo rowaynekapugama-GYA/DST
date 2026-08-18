@@ -1,58 +1,64 @@
-# Dental Specialists Turramurra — Homepage Redesign
+# Dental Specialists Turramurra — Website (Batch 1)
 
-Design concept for the dentalspecialists.com.au rebuild, by Generate Your Audience.
+Static site, ready for Vercel drag-and-drop. No build step.
 
-**Direction:** modern, elegant, family-oriented. Palette drawn from the DST logo teal, with Fraunces italic display type echoing the cursive logo script. Specialist positioning only (orthodontics + prosthodontics) — general dentistry removed per client.
+## Pages
+- `index.html` — approved homepage
+- `about-us.html` — About Us + Our Team (full specialist bios + support team)
+- `prosthodontics.html` — Prosthodontist
+- `orthodontics.html` — Orthodontist
+- `general-services.html` — General Dental Services
+- `patient-info.html` — Patient Info + resources
+- `vercel.json` — cleanUrls, no trailing slash
 
-## Structure
+## Built so far
 
-- `index.html` — self-contained homepage mockup (all CSS/JS inline)
-- `assets/` — logo variants and imagery
-  - `logo.png` / `logo-white.png` — original + white-wordmark variant (transparent header & footer)
-  - `kids-braces.jpg`, `adult-clear-aligner.jpg`, `aligner-smile-bg.jpg` — compressed Shutterstock comps; replace with licensed originals at build
+**Batch 1 — main pages:** index, about-us, prosthodontics, orthodontics,
+general-services, patient-info
 
-Practice photos and the hero banner are hotlinked from the current live site / S3 and should be re-uploaded to the new media library at build time.
+**Batch 2 — Prosthodontics children (5):**
+- comprehensive-assessment.html
+- cosmetic-dental-care.html
+- anti-ageing-restorative.html  (incl. crowns & bridges, full mouth rejuvenation,
+  dental implants, removable + complete dentures, 3 case studies)
+- tmd-treatment.html
+- sleep-apnoea.html
 
-## Preview
+These are wired into the mega menu, the Prosthodontics service cards and the footer.
 
-Open `index.html` directly, or enable GitHub Pages (Settings → Pages → deploy from branch) to share a live link.
+## Batch 6 (built)
+- `contact.html` — practice details, hours, directions, referral/enquiry cards.
+  All nav + footer "Contact" links now point here (the enquiry form remains on index.html#contact).
+- `emergency-dental.html` — first of the General Services children.
 
-## Round (12 Aug)
+## Still to build
 
-- Afterpay added to the payment options row (official landscape logo)
-- Header logo enlarged ~3x and set to overhang below the header onto the hero image
-- New "We accept all Australian health funds" section added between the payment steps and Visiting Us, with the main funds (Bupa, HCF, Medibank, nib, HBF, Australian Unity, CBHS, Teachers Health)
-  - NOTE: fund logos are styled text wordmarks as placeholders — health fund logos are trademarked; swap official artwork at build (client said "just main health funds logos only")
+- **Orthodontics children (8):** Orthodontics for Children / Adults, Two-Phase
+  Treatment, Orthodontic Options, Invisalign, Clarity Ceramic Braces,
+  EMS Airflow Guided Biofilm Therapy, Orthodontic FAQ's
+- **General Services children (5):** Preventative Care, Cosmetics Dentistry,
+  Emergency Dental, Restorative Treatments, Oral Health Maintenance
+- **Patient Info children (9):** Appointments, Fees & Payment, Afterpay,
+  Lifestyle Damage, Diagnostic Information, Jaw Pain Information, Follow Up Care,
+  Your Welcome Pack & Registration, Links
+- **Other:** Contact Us, Blog, DST Academy, Doctor Referrals, Recruitment
 
-## Colour theme toggle (11 Aug)
+Links to any not-yet-built page still point at the relevant parent section, so
+nothing dead-ends.
 
-- The feature sections (Orthodontics band + Contact) now read from a `--feature-bg` CSS variable
-- Default is the light blue (#E2F0F3); a footer toggle beside the copyright switches them to a warm sand (#EBDDC9)
-- Toggle adds/removes `body.theme-sand`, remembers the choice via localStorage (works when hosted / opened directly; harmless no-op elsewhere)
-- For the build: pick one palette and hard-code it, or keep the toggle as an internal preview and remove before launch
+## Notes
+- Child/service pages are not built yet. Mega-menu and card links for them currently
+  point at the relevant parent page section (`#services` / `#resources`).
+- Practice photography, team photos and hero images are hotlinked from
+  `dentalspecialists.com.au/wp-content/uploads/...` — migrate into the new media
+  library at final build.
+- Placeholder/theme dummy copy from the old WordPress site (Vokalia/Consonantia,
+  "A small river named Duden", info@example.com, US phone numbers, "Mark Mcguire",
+  "25 Years of Experience in Interior Design") was deliberately excluded.
 
-## Latest round (23 Jul — pre-meeting)
-
-- Real practice photography added: new "Inside the Practice" gallery + real reception/exterior in Welcome and Visit
-- Real dentist portraits swapped in for Dr Kamini Titus and Clin. A/Prof Anthony Au (team, arch image, mega menus) — portraits are low-res (319px source); request hi-res versions for production
-- All "Orthodontist" titles now read "Specialist Orthodontist"
-- Two services added: Teeth Whitening, Custom Mouthguards
-- Zip Pay + Medipay added to the payment logo row and text references (styled text badges — swap official brand artwork at build)
-- More playful graphics: floating tooth outlines + twinkling sparkles in hero and orthodontics band
-
-## Earlier round (23 Jul)
-
-- New family hero banner; header, buttons and footer switched to logo blue (orange accent removed)
-- "Orthodontics for Every Age" moved directly after "Why families choose us"
-- Age cards rebuilt as Kids / Teens / Adults with photography; Dr Kamini now in the arch image
-- Invisalign Platinum Provider callout added inside the orthodontics section
-- Full-width Google Map added above the footer
-- New page needed: /turramurra/teens-orthodontist/ (linked from cards, mega menu and footer)
-
-## Before go-live
-
-- Confirm hero stats (25+ years / 10,000+ procedures are placeholders)
-- Confirm Dr Jinjing Mao removal (assumed general dentist)
-- Confirm hours: header says Mon–Fri 8–5, appointments copy says Mon–Sat 9–5
-- Swap in official Invisalign Platinum Provider badge from the Invisalign Doctor Site + verify current tier
-- Mobile menu needs an accordion version of the mega-menu structure
+## Outstanding client questions
+- Homepage hero stats (25+ years / 10,000+ procedures) are still placeholders.
+- Opening hours conflict: header says Mon–Fri 08:00–17:00; the General Services page
+  says Mon/Wed/Fri 8:00am–6:00pm. Needs confirming.
+- General Services + Dr Jinjing Mao are included here per this brief, which reverses
+  the earlier instruction to remove general dentistry. Confirm which is current.
